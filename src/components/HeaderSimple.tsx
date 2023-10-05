@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, Group, Burger } from "@mantine/core";
+import { Container, Group, Burger, Image } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { MantineLogo } from "@mantine/ds";
 import classes from "./HeaderSimple.module.css";
@@ -33,7 +33,15 @@ export function HeaderSimple() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <MantineLogo size={28} />
+        {/* <MantineLogo size={28} />
+         */}
+        <Image
+          src="/HopeGives-full-color.png"
+          alt="Hope Gives"
+          width={40}
+          height={40}
+          radius="sm"
+        />
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>

@@ -9,6 +9,15 @@ import "@mantine/core/styles.css";
 // Import global styles for the entire application
 import "../globals.css";
 
+import { Quicksand } from "@next/font/google";
+
+const quicksand = Quicksand({
+  subsets: ["latin", "latin-ext"],
+  weight: ["500", "700"],
+  // Optional: Specify the display property for font-face
+  // display: "swap",
+});
+
 // The MyApp component is a custom App component that wraps all pages.
 // It receives the actual page as the `Component` prop.
 function MyApp({ Component, pageProps }: AppProps) {
@@ -18,7 +27,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     // you make sure all components can access Mantine features.
     <MantineProvider>
       {/* Render the current page */}
-      <Component {...pageProps} />
+      <div className={quicksand.className}>
+        <Component {...pageProps} />
+      </div>
     </MantineProvider>
   );
 }
