@@ -1,7 +1,7 @@
+"use client";
 import { useState } from "react";
 import { Container, Group, Burger, Image } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { MantineLogo } from "@mantine/ds";
 import classes from "./HeaderSimple.module.css";
 
 const links = [
@@ -33,19 +33,16 @@ export function HeaderSimple() {
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        {/* <MantineLogo size={28} />
-         */}
         <Image
-          src="/HopeGives-full-color.png"
+          src="/HopeGives-Full-Color.png"
           alt="Hope Gives"
-          width={40}
           height={40}
+          width={40}
           radius="sm"
         />
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
-
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
       </Container>
     </header>
