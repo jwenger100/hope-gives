@@ -4,8 +4,16 @@ import "./globals.css";
 import "@mantine/core/styles.css";
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
-import { HeaderSimple } from "@/components/HeaderSimple";
-import { MantineProvider } from "@mantine/core";
+import { Header } from "@/components/Header";
+import { MantineProvider, createTheme } from "@mantine/core";
+
+// export const theme = createTheme({
+/** Put your mantine theme overrides here */
+/** See full list of overridable components here: https://mantine.dev/theming/overrides */
+// headings: {
+//   fontFamily: "Quicksand, sans-serif",
+// },
+// });
 
 const quicksand = Quicksand({
   subsets: ["latin", "latin-ext"],
@@ -26,13 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* /favicon.ico does not work - must have images folder???? */}
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+        <link rel="icon" type="image/png" href="/HopeGives-Icon1.png" />
       </head>
       <body className={quicksand.className}>
         <MantineProvider>
-          {/* Adds HeaderSimple to every page */}
-          <HeaderSimple />
+          {/* Adds Header to every page */}
+          <Header />
           {children}
         </MantineProvider>
       </body>
