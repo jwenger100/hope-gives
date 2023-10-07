@@ -63,12 +63,12 @@ export function HeroBullets() {
           </List>
 
           <Group mt={30}>
-            <Button radius="xl" size="md" className={classes.control}>
+            <Button radius="xl" size="md" className="hg-button">
               Start a Fundraiser
             </Button>
           </Group>
         </div>
-        <Image src="./image.svg" className={classes.image} />
+        <Image src="./Hero-Image1.jpg" className={classes.image} />
       </div>
     </Container>
   );

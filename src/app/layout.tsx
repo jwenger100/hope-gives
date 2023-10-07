@@ -5,15 +5,7 @@ import "@mantine/core/styles.css";
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import { Header } from "@/components/Header";
-import { MantineProvider, createTheme } from "@mantine/core";
-
-// export const theme = createTheme({
-/** Put your mantine theme overrides here */
-/** See full list of overridable components here: https://mantine.dev/theming/overrides */
-// headings: {
-//   fontFamily: "Quicksand, sans-serif",
-// },
-// });
+import { MantineProvider } from "@mantine/core";
 
 const quicksand = Quicksand({
   subsets: ["latin", "latin-ext"],

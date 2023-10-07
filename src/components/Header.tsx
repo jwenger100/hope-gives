@@ -6,16 +6,15 @@ import classes from "./Header.module.css";
 import { useMediaQuery } from "@mantine/hooks";
 
 const mainLinks = [
+  { link: "#", label: "Our Values" },
   { link: "#", label: "About Us" },
-  { link: "#", label: "How it works" },
-  { link: "#", label: "Our values" },
-  { link: "#", label: "Blog" },
   { link: "#", label: "Contact" },
+  { link: "#", label: "Blog" },
 ];
 
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(-1);
   const isMobile = useMediaQuery("(max-width: 750px)");
 
   const mainItems = mainLinks.map((item, index) => (
@@ -23,7 +22,7 @@ export function Header() {
       href={item.link}
       key={item.label}
       className={classes.mainLink}
-      data-active={index === active || undefined}
+      data-active={index === active && active !== -1 ? true : undefined}
       onClick={(event) => {
         event.preventDefault();
         setActive(index);
