@@ -68,7 +68,7 @@ export function HeroBullets() {
             </Button>
           </Group>
         </div>
-        <Image src="./Hero-Image1.jpg" className={classes.image} />
+        <Image src="./Hero-Image1.jpg" className={classes.image} radius="md" />
       </div>
     </Container>
   );

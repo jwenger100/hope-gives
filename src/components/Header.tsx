@@ -40,7 +40,6 @@ export function Header() {
           alt="Hope Gives"
           height={isMobile ? 40 : 50}
           width={isMobile ? 40 : 50}
-          radius="sm"
         />
         <Box className={classes.links} visibleFrom="sm">
           <Group gap={0} justify="flex-end" className={classes.mainLinks}>
