@@ -5,7 +5,7 @@ import "@mantine/core/styles.css";
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import { Header } from "@/components/Header";
-import { MantineProvider } from "@mantine/core";
+import ThemeProvider from "./theme-provider";
 
 const quicksand = Quicksand({
   subsets: ["latin", "latin-ext"],
@@ -29,11 +29,11 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/HopeGives-Icon1.png" />
       </head>
       <body className={quicksand.className}>
-        <MantineProvider>
+        <ThemeProvider>
           {/* Adds Header to every page */}
           <Header />
           {children}
-        </MantineProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

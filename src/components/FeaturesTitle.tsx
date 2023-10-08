@@ -57,7 +57,11 @@ export function FeaturesTitle() {
         size={44}
         radius="md"
         variant="gradient"
-        gradient={{ deg: 133, from: "blue", to: "cyan" }}
+        gradient={{
+          deg: 133,
+          from: "var(--hopegives-orange)",
+          to: "var(--hopegives-yellow)",
+        }}
       >
         <feature.icon
           style={{ width: rem(26), height: rem(26) }}

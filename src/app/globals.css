@@ -5,9 +5,6 @@
   --hopegives-yellow: #ffc200;
   --hopegives-gray: #594f3e;
 
-  /* Override  */
-  --mantine-font-family-headings: "Quicksand", sans-serif !important;
-
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
