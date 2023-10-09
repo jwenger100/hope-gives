@@ -1,5 +1,5 @@
 "use client";
-import { Avatar, Text, Paper, Grid } from "@mantine/core";
+import { Avatar, Text, Paper, Grid, Title, Box } from "@mantine/core";
 import classes from "./UserCards.module.css";
 
 interface User {
@@ -42,31 +42,62 @@ const users = [
 
 export function UserCards() {
   return (
-    <Grid gutter="xl">
-      {users.map((user: User) => (
-        <Grid.Col span={{ base: 12, md: 6, lg: 3 }}>
-          <Paper
-            key={user.name}
-            radius="md"
-            withBorder
-            p="lg"
-            bg="var(--mantine-color-body)"
-            //   w={320}
-            h="100%"
-          >
-            <Avatar src={user.image} size={120} radius={120} mx="auto" />
-            <Text ta="center" fz="lg" fw={500} mt="md">
-              {user.name}
-            </Text>
-            <Text ta="center" c="dimmed" fz="sm">
-              {user.position}
-            </Text>
-            <Text ta="center" c="dimmed" fz="sm">
-              {user.description}
-            </Text>
-          </Paper>
-        </Grid.Col>
-      ))}
-    </Grid>
+    <>
+      <Box
+        w={{ xs: 600, sm: 600, lg: 700 }}
+        py={{ base: "xs", sm: "md", lg: "xl" }}
+        ta="center"
+        mx="auto"
+        mb="ms"
+      >
+        <Title order={2} style={{ textAlign: "center" }} mb="sm">
+          Meet the Team
+        </Title>
+        <Text ta="center" c="dimmed" fz="sm">
+          HopeGives is a crowdfunding platform founded on{" "}
+          <Text td="underline" style={{ display: "inline-block" }}>
+            accountability,
+          </Text>{" "}
+          and{" "}
+          <Text td="underline" style={{ display: "inline-block" }}>
+            audacious hope,
+          </Text>{" "}
+          serving as a beacon for social fundraising. We strive to unlock the
+          potential of the faith community and compassionate givers, enhancing
+          donor trust while ensuring every donation meets its intended purpose.
+        </Text>
+        <Text ta="center" c="dimmed" fz="sm">
+          We take pride in delivering funds to beneficiaries up to 10 times
+          faster than our competitors, providing timely assistance in critical
+          moments.
+        </Text>
+      </Box>
+      <Grid gutter="xl">
+        {users.map((user: User) => (
+          <Grid.Col span={{ base: 12, md: 6, lg: 3 }}>
+            <Paper
+              key={user.name}
+              radius="md"
+              withBorder
+              p="lg"
+              bg="var(--mantine-color-body)"
+              //   w={320}
+              h="100%"
+            >
+              <Avatar src={user.image} size={120} radius={120} mx="auto" />
+              <Text ta="center" fz="lg" fw={500} mt="md">
+                {user.name}
+              </Text>
+              <Text ta="center" c="dimmed" fz="sm">
+                {user.position}
+              </Text>
+              <Text ta="center" c="dimmed" fz="sm">
+                {user.description}
+              </Text>
+            </Paper>
+          </Grid.Col>
+        ))}
+      </Grid>
+    </>
   );
 }
