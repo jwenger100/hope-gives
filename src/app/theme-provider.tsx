@@ -3,10 +3,8 @@
 // Using Third-party packages and providers
 // https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns#using-third-party-packages-and-providers
 
-import React, { createContext, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { createTheme, MantineProvider } from "@mantine/core";
-
-export const ThemeContext = createContext({});
 
 const theme = createTheme({
   fontFamily: "Quicksand, sans-serif",
