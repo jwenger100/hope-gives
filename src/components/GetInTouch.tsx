@@ -13,7 +13,13 @@ import classes from "./GetInTouch.module.css";
 
 export function GetInTouch() {
   return (
-    <Paper shadow="md" radius="lg">
+    <Paper
+      shadow="md"
+      radius="lg"
+      w={"1200px"}
+      display={"inline-grid"}
+      mx={"auto"}
+    >
       <div className={classes.wrapper}>
         <div
           className={classes.contacts}

@@ -1,5 +1,8 @@
 /* Selects the root element of the document:
    <html> in the case of HTML */
+
+/* Mantine style props reference */
+/* https://mantine.dev/styles/style-props/ */
 :root {
   --hopegives-orange: #ff9500;
   --hopegives-yellow: #ffc200;
