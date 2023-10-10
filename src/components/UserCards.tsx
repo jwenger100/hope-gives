@@ -89,7 +89,9 @@ export function UserCards() {
           moments.
         </Text>
       </Box>
-      <Grid gutter="xl">{tiles}</Grid>
+      <Grid gutter="xl" mb="xl">
+        {tiles}
+      </Grid>
     </>
   );
 }
