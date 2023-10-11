@@ -3,6 +3,9 @@
 
 /* Mantine style props reference */
 /* https://mantine.dev/styles/style-props/ */
+
+/* CSS variables */
+/* https://mantine.dev/styles/css-variables/ */
 :root {
   --hopegives-orange: #ff9500;
   --hopegives-yellow: #ffc200;

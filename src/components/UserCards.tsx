@@ -49,6 +49,7 @@ export function UserCards() {
         p="lg"
         bg="var(--mantine-color-body)"
         h="100%"
+        className={classes.card}
       >
         <Avatar src={user.image} size={120} radius={120} mx="auto" />
         <Text ta="center" fz="lg" fw={500} mt="md">

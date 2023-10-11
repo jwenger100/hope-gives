@@ -1,3 +1,4 @@
+"use client";
 import { Text, Box, Stack, rem } from "@mantine/core";
 import { IconSun, IconPhone, IconMapPin, IconAt } from "@tabler/icons-react";
 import classes from "./ContactIcons.module.css";

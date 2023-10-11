@@ -4,8 +4,8 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <Container mt="70px">
-      <Box id="blog">
+    <Container mt="100px" id="blog">
+      <Box>
         <Title order={2}>Blog</Title>
         <ArticlesCardsGrid />
       </Box>

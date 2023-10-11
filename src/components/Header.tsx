@@ -2,7 +2,6 @@
 import { useState } from "react";
 import {
   Container,
-  Anchor,
   Group,
   Burger,
   Box,
