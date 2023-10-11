@@ -73,7 +73,7 @@ export function UserCards() {
         mx="auto"
         mb="ms"
       >
-        <Title order={2} style={{ textAlign: "center" }} mb="sm">
+        <Title order={2} style={{ textAlign: "center" }} mb="sm" id="aboutUs">
           Meet the Team
         </Title>
         <Text ta="center" c="dimmed" fz="sm">

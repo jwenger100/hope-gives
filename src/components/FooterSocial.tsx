@@ -1,5 +1,5 @@
 "use client";
-import { Container, Group, ActionIcon, rem, Image } from "@mantine/core";
+import { Container, Group, ActionIcon, rem, Image, Box } from "@mantine/core";
 import {
   IconBrandTwitter,
   IconBrandYoutube,
@@ -19,6 +19,7 @@ export function FooterSocial() {
           width={70}
           height={50}
         />
+        <Box>Powered by Colchuck Consulting</Box>
         <Group
           gap={0}
           className={classes.links}

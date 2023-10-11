@@ -106,6 +106,7 @@ export function FeaturesTitle() {
             className={classes.title}
             order={2}
             style={{ textAlign: "center" }}
+            id="ourValues"
           >
             Our Values{" "}
           </Title>

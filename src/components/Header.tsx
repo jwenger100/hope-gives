@@ -14,33 +14,35 @@ import { useDisclosure } from "@mantine/hooks";
 import classes from "./Header.module.css";
 import { useMediaQuery } from "@mantine/hooks";
 import { useHeadroom } from "@mantine/hooks";
-
-const mainLinks = [
-  { link: "#", label: "Our Values" },
-  { link: "#", label: "About Us" },
-  { link: "#", label: "Contact" },
-  { link: "#", label: "Blog" },
-];
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(-1);
   const isMobile = useMediaQuery("(max-width: 750px)");
   const pinned = useHeadroom({ fixedAt: 120 });
+  const pathname = usePathname();
+
+  const mainLinks = [
+    { link: pathname === "/blog" ? "/" : "#ourValues", label: "Our Values" },
+    { link: pathname === "/blog" ? "/" : "#aboutUs", label: "About Us" },
+    { link: pathname === "/blog" ? "/" : "#contact", label: "Contact" },
+    { link: pathname === "/" ? "/blog" : "/", label: "Blog" },
+  ];
 
   const mainItems = mainLinks.map((item, index) => (
-    <Anchor<"a">
+    <Link
       href={item.link}
       key={item.label}
       className={classes.mainLink}
       data-active={index === active && active !== -1 ? true : undefined}
       onClick={(event) => {
-        event.preventDefault();
         setActive(index);
       }}
     >
       {item.label}
-    </Anchor>
+    </Link>
   ));
 
   return (
@@ -60,12 +62,14 @@ export function Header() {
       >
         <header className={classes.header}>
           <Container className={classes.inner}>
-            <Image
-              src="/HopeGives-Full-Color.png"
-              alt="Hope Gives"
-              height={isMobile ? 40 : 50}
-              width={isMobile ? 40 : 50}
-            />
+            <Link href="/" onClick={() => setActive(-1)}>
+              <Image
+                src="/HopeGives-Full-Color.png"
+                alt="Hope Gives"
+                height={isMobile ? 40 : 50}
+                width={isMobile ? 40 : 50}
+              />
+            </Link>
             <Box className={classes.links} visibleFrom="sm">
               <Group gap={0} justify="flex-end" className={classes.mainLinks}>
                 {mainItems}

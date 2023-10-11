@@ -13,13 +13,8 @@ import classes from "./GetInTouch.module.css";
 
 export function GetInTouch() {
   return (
-    <Paper
-      shadow="md"
-      radius="lg"
-      w={"1200px"}
-      display={"inline-grid"}
-      mx={"auto"}
-    >
+    // center later with fixed width
+    <Paper shadow="md" radius="lg" w={"1200px"} display={"contents"}>
       <div className={classes.wrapper}>
         <div
           className={classes.contacts}
@@ -36,7 +31,7 @@ export function GetInTouch() {
           className={classes.form}
           onSubmit={(event) => event.preventDefault()}
         >
-          <Text fz="lg" fw={700} className={classes.title}>
+          <Text fz="lg" fw={700} className={classes.title} id="contact">
             Get in touch
           </Text>
 
