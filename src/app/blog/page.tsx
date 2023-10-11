@@ -1,12 +1,15 @@
 import { ArticlesCardsGrid } from "@/components/ArticlesCardsGrid";
+import { Box, Title, Container } from "@mantine/core";
 import React from "react";
 
 const Blog = () => {
   return (
-    <>
-      <div style={{ marginTop: "70px", marginLeft: "200px" }}>Blog Page</div>
-      <ArticlesCardsGrid />
-    </>
+    <Container mt="70px">
+      <Box id="blog">
+        <Title order={2}>Blog</Title>
+        <ArticlesCardsGrid />
+      </Box>
+    </Container>
   );
 };
 

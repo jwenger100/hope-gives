@@ -55,7 +55,10 @@ export function GetInTouch() {
             />
 
             <Group justify="flex-end" mt="md">
-              <Button type="submit" className={`${classes.control} hg-button`}>
+              <Button
+                type="submit"
+                className={`${classes.control} hopegives-button`}
+              >
                 Send message
               </Button>
             </Group>

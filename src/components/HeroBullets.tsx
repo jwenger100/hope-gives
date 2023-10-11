@@ -14,10 +14,13 @@ import classes from "./HeroBullets.module.css";
 
 export function HeroBullets() {
   return (
-    <Container size="md">
+    <Container size="md" className={classes.container}>
       <div className={classes.inner}>
         <div className={classes.content}>
-          <Title className={classes.title}>HopeGives</Title>
+          <Title className={classes.title}>
+            <span className={classes.titleHope}>hope</span>
+            <span className={classes.titleGives}>gives</span>
+          </Title>
           <Text c="dimmed" mt="md">
             Discover the true impact of your contributions with us. Through
             transparent tracking, you can witness the journey of every dollar
@@ -59,7 +62,11 @@ export function HeroBullets() {
           </List>
 
           <Group mt={30}>
-            <Button radius="xl" size="md" className="hg-button">
+            <Button
+              radius="xl"
+              size="md"
+              className={`hopegives-button ${classes.fundraiserButton}`}
+            >
               Start a Fundraiser
             </Button>
           </Group>

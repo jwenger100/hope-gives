@@ -28,7 +28,7 @@ export function Header() {
     { link: pathname === "/blog" ? "/" : "#ourValues", label: "Our Values" },
     { link: pathname === "/blog" ? "/" : "#aboutUs", label: "About Us" },
     { link: pathname === "/blog" ? "/" : "#contact", label: "Contact" },
-    { link: pathname === "/" ? "/blog" : "/", label: "Blog" },
+    { link: pathname === "/" ? "/blog#blog" : "/blog", label: "Blog" },
   ];
 
   const mainItems = mainLinks.map((item, index) => (

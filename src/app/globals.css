@@ -15,7 +15,7 @@
   --spacing-xl: 2rem;
 }
 
-.hg-button {
+.hopegives-button {
   background: linear-gradient(
     to right,
     var(--hopegives-orange),
@@ -24,7 +24,7 @@
   transition: all 0.3s ease;
 }
 
-.hg-button:hover {
+.hopegives-button:hover {
   background: linear-gradient(
     to right,
     var(--hopegives-yellow),
