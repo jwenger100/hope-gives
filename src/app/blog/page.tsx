@@ -1,8 +1,12 @@
+import { ArticlesCardsGrid } from "@/components/ArticlesCardsGrid";
 import React from "react";
 
 const Blog = () => {
   return (
-    <div style={{ marginTop: "200px", marginLeft: "200px" }}>Blog Page</div>
+    <>
+      <div style={{ marginTop: "70px", marginLeft: "200px" }}>Blog Page</div>
+      <ArticlesCardsGrid />
+    </>
   );
 };
 
