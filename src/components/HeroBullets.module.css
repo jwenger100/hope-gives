@@ -1,3 +1,36 @@
+@keyframes fadeInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .inner {
   display: flex;
   justify-content: space-between;
@@ -8,10 +41,14 @@
 .content {
   max-width: rem(480px);
   margin-right: calc(var(--mantine-spacing-xl) * 3);
+  animation: fadeInFromLeft 1s ease-out forwards;
 
   @media (max-width: $mantine-breakpoint-md) {
     max-width: 100%;
     margin-right: 0;
+  }
+  .listItem {
+    animation: fadeIn 1.5s ease-out forwards;
   }
 }
 
@@ -35,6 +72,7 @@
 .image {
   width: rem(376px);
   height: rem(356px);
+  animation: fadeInFromRight 1s ease-out forwards;
 
   @media (max-width: $mantine-breakpoint-md) {
     display: none;

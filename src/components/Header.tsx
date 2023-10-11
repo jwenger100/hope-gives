@@ -60,7 +60,9 @@ export function Header() {
           backgroundColor: "var(--mantine-color-body)",
         }}
       >
-        <header className={classes.header}>
+        <header
+          className={`${classes.header} ${classes.headerSlideDownFadeIn}`}
+        >
           <Container className={classes.inner}>
             <Link href="/" onClick={() => setActive(-1)}>
               <Image
