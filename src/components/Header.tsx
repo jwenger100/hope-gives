@@ -7,6 +7,7 @@ import {
   Image,
   Portal,
   rem,
+  Drawer,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Header.module.css";
@@ -73,6 +74,22 @@ export function Header() {
             />
           </Container>
         </header>
+        <Drawer
+          opened={opened}
+          onClose={toggle}
+          position="top"
+          padding="md"
+          size="100%"
+          title="hopegives"
+          onClick={toggle}
+          zIndex={1000000}
+        >
+          <Box>
+            <Group gap={0} className={classes.drawerContent}>
+              {mainItems}
+            </Group>
+          </Box>
+        </Drawer>
       </Box>
     </Portal>
   );
