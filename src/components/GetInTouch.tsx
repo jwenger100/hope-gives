@@ -46,7 +46,7 @@ export function GetInTouch() {
               <TextInput label="Your name" placeholder="Your name" />
               <TextInput
                 label="Your email"
-                placeholder="info@hopegives.com"
+                placeholder="your@email.com"
                 required
               />
             </SimpleGrid>
