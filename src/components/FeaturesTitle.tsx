@@ -9,40 +9,41 @@ import {
   Image,
 } from "@mantine/core";
 import {
-  IconReceiptOff,
-  IconFlame,
-  IconCircleDotted,
-  IconFileCode,
+  IconPlant,
+  IconGift,
+  IconCrown,
+  IconEmpathize,
+  IconHandStop,
 } from "@tabler/icons-react";
 import classes from "./FeaturesTitle.module.css";
 
 const features = [
   {
-    icon: IconReceiptOff,
+    icon: IconPlant,
     title: "Make a Difference",
     description:
       "A boy saw his grandfather saving sand dollars by tossing them into the sea. Why? asked the boy. The grandfather tossed another and said, 'To that one, it means everything.' We believe every act, big or small, creates an impact.",
   },
   {
-    icon: IconFileCode,
+    icon: IconEmpathize,
     title: "Do Good",
     description:
       "The Good Samaritan didn't walk past, he stopped, cared, and acted. Similarly, we are here to actively demonstrate kindness and compassion to those in need.",
   },
   {
-    icon: IconCircleDotted,
+    icon: IconCrown,
     title: "True Religion",
     description:
       "True religion is not just about rituals but about taking care of the hurting, the broken, and the marginalized. It’s about having a heart that responds to pain and suffering.",
   },
   {
-    icon: IconFlame,
+    icon: IconGift,
     title: "Pay it forward",
     description:
       "Our blessings are not just for us. They are meant to be shared, multiplied, and used to bless others in an ever-continuing cycle of generosity.",
   },
   {
-    icon: IconFlame,
+    icon: IconHandStop,
     title: "Helping Hands",
     description:
       "We strive to be a tangible expression of faith – the hands that extend in generosity and care. Just as hands are vital for action, our community collaboratively works, reaching out and helping in harmony.",
