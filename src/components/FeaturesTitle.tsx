@@ -3,7 +3,6 @@ import {
   Title,
   SimpleGrid,
   Text,
-  Button,
   ThemeIcon,
   Grid,
   rem,
@@ -81,25 +80,7 @@ export function FeaturesTitle() {
     <div className={classes.wrapper}>
       <Grid gutter={80}>
         <Grid.Col span={{ base: 12, md: 5 }}>
-          {/* <Title className={classes.title} order={2}>
-            A fully featured React components library for your next project
-          </Title>
-          <Text c="dimmed">
-            Build fully functional accessible web applications faster than ever
-            – Mantine includes more than 120 customizable components and hooks
-            to cover you in any situation
-          </Text>
-
-          <Button
-            variant="gradient"
-            gradient={{ deg: 133, from: "blue", to: "cyan" }}
-            size="lg"
-            radius="md"
-            mt="xl"
-          >
-            Get started
-          </Button> */}
-          <Image src="/Hero-Image.jpg" alt="Hope Gives" radius="md" />
+          <Image src="/kindness.svg" alt="kindness hands" radius="md" />
         </Grid.Col>
         <Grid.Col span={{ base: 12, md: 7 }}>
           <Title
