@@ -1,14 +1,28 @@
+.flexCenter {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensures the container fills its parent's height */
+}
+
 .wrapper {
   display: flex;
+  height: 100%;
   background-color: light-dark(
     var(--mantine-color-white),
     var(--mantine-color-dark-8)
   );
+  background: linear-gradient(
+    135deg,
+    #e9f5fc 0%,
+    #f6f6f6 100%
+  ); /* Gradient from soft blue to light gray */
+
   border-radius: var(--mantine-radius-lg);
   padding: rem(4px);
   border: rem(1px) solid
     light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-8));
-
+  width: 1035px;
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: column;
   }

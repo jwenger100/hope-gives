@@ -14,7 +14,7 @@ import classes from "./GetInTouch.module.css";
 export function GetInTouch() {
   return (
     // center later with fixed width
-    <Paper shadow="md" radius="lg" w={"1200px"} display={"contents"}>
+    <Paper radius="lg" display={"contents"} className={classes.flexCenter}>
       <div className={classes.wrapper}>
         <div
           className={classes.contacts}
@@ -31,7 +31,13 @@ export function GetInTouch() {
           className={classes.form}
           onSubmit={(event) => event.preventDefault()}
         >
-          <Text fz="lg" fw={700} className={classes.title} id="contact">
+          <Text
+            fz="lg"
+            fw={700}
+            className={classes.title}
+            ta={{ xs: "left", md: "center" }}
+            id="contact"
+          >
             Get in touch
           </Text>
 
@@ -40,7 +46,7 @@ export function GetInTouch() {
               <TextInput label="Your name" placeholder="Your name" />
               <TextInput
                 label="Your email"
-                placeholder="hello@mantine.dev"
+                placeholder="info@hopegives.com"
                 required
               />
             </SimpleGrid>
