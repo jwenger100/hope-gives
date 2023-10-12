@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import { IconHeartHandshake } from "@tabler/icons-react";
 import classes from "./HeroBullets.module.css";
+import Typewriter from "typewriter-effect";
 
 export function HeroBullets() {
   return (
@@ -20,7 +21,24 @@ export function HeroBullets() {
           <Title className={classes.title}>
             <span className={classes.titleHope}>hope</span>
             <span className={classes.titleGives}>gives</span>
-          </Title>
+          </Title>{" "}
+          <Typewriter
+            options={{
+              strings: [
+                "Gas",
+                "Food",
+                "Travel",
+                "Emergency Relief",
+                "Prayers",
+                "Accountability",
+                "Authenticity",
+              ],
+              autoStart: true,
+              loop: true,
+              wrapperClassName: classes.typewriterWrapper,
+              cursorClassName: classes.typewriterCursor,
+            }}
+          />
           <Text c="dimmed" mt="md">
             Discover the true impact of your contributions with us. Through
             transparent tracking, you can witness the journey of every dollar
@@ -30,7 +48,6 @@ export function HeroBullets() {
             collective effort and the limitless potential when faith is put into
             action.
           </Text>
-
           <List
             mt={30}
             spacing="sm"
@@ -60,7 +77,6 @@ export function HeroBullets() {
               action.
             </List.Item>
           </List>
-
           <Group mt={30}>
             <Button
               radius="xl"
