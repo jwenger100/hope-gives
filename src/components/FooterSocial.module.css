@@ -13,7 +13,10 @@
 
   @media (max-width: $mantine-breakpoint-xs) {
     flex-direction: column;
-    width: fit-content;
+    /* image width does not expand at xs breakpoint */
+    img {
+      width: 70px;
+    }
   }
 }
 
