@@ -41,14 +41,19 @@ const users = [
 ];
 
 export function UserCards() {
-  const tiles = users.map((user: User) => (
-    <Grid.Col key={user.name} span={{ base: 12, md: 6, lg: 3 }}>
+  const tiles = users.map((user: User, index: number) => (
+    <Grid.Col
+      key={user.name}
+      span={{ base: 12, md: 6, lg: 6 }}
+      className={index % 2 === 0 ? classes.flexEnd : ""}
+    >
       <Paper
         radius="md"
         withBorder
         p="lg"
         bg="var(--mantine-color-body)"
         h="100%"
+        w={{ lg: 500 }}
         className={classes.card}
       >
         <Avatar src={user.image} size={120} radius={120} mx="auto" />
@@ -90,7 +95,7 @@ export function UserCards() {
           moments.
         </Text>
       </Box>
-      <Grid gutter="xl" mb="xl">
+      <Grid gutter="xl" py={"xl"}>
         {tiles}
       </Grid>
     </>
