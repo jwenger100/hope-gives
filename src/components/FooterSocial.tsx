@@ -15,7 +15,7 @@ export function FooterSocial() {
       <Container className={classes.inner}>
         <Link href="/">
           <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-Full-Color.png`}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-full-color.png`}
             alt="footer-logo"
             width={70}
             height={50}

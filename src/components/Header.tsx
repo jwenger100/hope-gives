@@ -41,7 +41,7 @@ export function Header() {
         <Container className={classes.inner}>
           <Link href="/">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-Full-Color.png`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-full-color.png`}
               alt="Hope Gives"
               height={isMobile ? 40 : 50}
               width={isMobile ? 40 : 50}
