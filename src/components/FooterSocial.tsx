@@ -13,15 +13,18 @@ export function FooterSocial() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <Link href="/">
-          <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-full-color.png`}
-            alt="footer-logo"
-            width={70}
-            height={50}
-          />
-        </Link>
-        <Box>Powered by Colchuck Consulting</Box>
+        <Image
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-full-color.png`}
+          alt="footer-logo"
+          width={70}
+          height={50}
+        />
+        <Box>
+          Powered by{" "}
+          <Link href={"https://www.colchuckconsulting.com"} target={"_blank"}>
+            Colchuck Consulting
+          </Link>
+        </Box>
         <Group
           gap={0}
           className={classes.links}

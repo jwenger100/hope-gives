@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import {
   Container,
   Group,
@@ -18,6 +19,7 @@ import { usePathname } from "next/navigation";
 
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
+  const [active, setActive] = useState(-1);
   const isMobile = useMediaQuery("(max-width: 750px)");
   const pinned = useHeadroom({ fixedAt: 120 });
   const pathname = usePathname();
@@ -30,7 +32,13 @@ export function Header() {
   ];
 
   const mainItems = mainLinks.map((item, index) => (
-    <Link href={item.link} key={item.label} className={classes.mainLink}>
+    <Link
+      href={item.link}
+      key={item.label}
+      className={classes.mainLink}
+      data-active={index === active && active !== -1 ? true : undefined}
+      onClick={() => setActive(index)}
+    >
       {item.label}
     </Link>
   ));
@@ -39,7 +47,7 @@ export function Header() {
     <>
       <header className={`${classes.header} ${classes.headerBlurIn}`}>
         <Container className={classes.inner}>
-          <Link href="/">
+          <Link href="/" onClick={() => setActive(-1)}>
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-full-color.png`}
               alt="Hope Gives"
