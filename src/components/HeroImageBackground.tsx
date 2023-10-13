@@ -3,8 +3,9 @@ import { Title, Text, Container, Button, Overlay, Box } from "@mantine/core";
 import classes from "./HeroImageBackground.module.css";
 
 export function HeroImageBackground() {
+  const imageUrl = `${process.env.NEXT_PUBLIC_BASE_PATH}/donations.jpg`;
   return (
-    <Box className={classes.wrapper} mt="60px">
+    <Box className={classes.wrapper} style={{backgroundImage: imageUrl}} mt="60px">
       <Overlay color="#000" opacity={0.65} zIndex={1} />
 
       <div className={classes.inner}>
