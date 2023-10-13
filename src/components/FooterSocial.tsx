@@ -7,18 +7,20 @@ import {
 } from "@tabler/icons-react";
 import { MantineLogo } from "@mantine/ds";
 import classes from "./FooterSocial.module.css";
+import Link from "next/link";
 
 export function FooterSocial() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        {/* <MantineLogo size={28} /> */}
-        <Image
-          src="/HopeGives-Full-Color.png"
-          alt="footer-logo"
-          width={70}
-          height={50}
-        />
+        <Link href="/">
+          <Image
+            src="/HopeGives-Full-Color.png"
+            alt="footer-logo"
+            width={70}
+            height={50}
+          />
+        </Link>
         <Box>Powered by Colchuck Consulting</Box>
         <Group
           gap={0}

@@ -12,9 +12,6 @@ export default function Home() {
     <Container fluid>
       <HeroBullets />
       <FeaturesTitle />
-      <UserCards />
-      <GetInTouch />
-      <FooterSocial />
     </Container>
   );
 }
