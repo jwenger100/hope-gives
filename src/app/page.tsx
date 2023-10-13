@@ -6,12 +6,16 @@ import { UserCards } from "@/components/UserCards";
 import { Container } from "@mantine/core";
 import { GetInTouch } from "@/components/GetInTouch";
 import { FooterSocial } from "@/components/FooterSocial";
+import { HeroImageBackground } from "@/components/HeroImageBackground";
 
 export default function Home() {
   return (
-    <Container fluid>
-      <HeroBullets />
-      <FeaturesTitle />
-    </Container>
+    <>
+      <HeroImageBackground />
+      <Container fluid>
+        {/* <HeroBullets /> */}
+        <FeaturesTitle />
+      </Container>
+    </>
   );
 }

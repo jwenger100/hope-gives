@@ -36,61 +36,47 @@ export function Header() {
   ));
 
   return (
-    <Portal>
-      <Box
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: rem(60),
-          zIndex: 1000000,
-          transform: `translate3d(0, ${pinned ? 0 : rem(-110)}, 0)`,
-          transition: "transform 400ms ease",
-          backgroundColor: "var(--mantine-color-body)",
-        }}
-      >
-        <header className={`${classes.header} ${classes.headerBlurIn}`}>
-          <Container className={classes.inner}>
-            <Link href="/">
-              <Image
-                src="/HopeGives-Full-Color.png"
-                alt="Hope Gives"
-                height={isMobile ? 40 : 50}
-                width={isMobile ? 40 : 50}
-              />
-            </Link>
-            <Box className={classes.links} visibleFrom="sm">
-              <Group gap={0} justify="flex-end" className={classes.mainLinks}>
-                {mainItems}
-              </Group>
-            </Box>
-            <Burger
-              opened={opened}
-              onClick={toggle}
-              className={classes.burger}
-              size="sm"
-              hiddenFrom="sm"
+    <>
+      <header className={`${classes.header} ${classes.headerBlurIn}`}>
+        <Container className={classes.inner}>
+          <Link href="/">
+            <Image
+              src="/HopeGives-Full-Color.png"
+              alt="Hope Gives"
+              height={isMobile ? 40 : 50}
+              width={isMobile ? 40 : 50}
             />
-          </Container>
-        </header>
-        <Drawer
-          opened={opened}
-          onClose={toggle}
-          position="top"
-          padding="md"
-          size="100%"
-          title="hopegives"
-          onClick={toggle}
-          zIndex={1000000}
-        >
-          <Box>
-            <Group gap={0} className={classes.drawerContent}>
+          </Link>
+          <Box className={classes.links} visibleFrom="sm">
+            <Group gap={0} justify="flex-end" className={classes.mainLinks}>
               {mainItems}
             </Group>
           </Box>
-        </Drawer>
-      </Box>
-    </Portal>
+          <Burger
+            opened={opened}
+            onClick={toggle}
+            className={classes.burger}
+            size="sm"
+            hiddenFrom="sm"
+          />
+        </Container>
+      </header>
+      <Drawer
+        opened={opened}
+        onClose={toggle}
+        position="top"
+        padding="md"
+        size="100%"
+        title="hopegives"
+        onClick={toggle}
+        zIndex={1000000}
+      >
+        <Box>
+          <Group gap={0} className={classes.drawerContent}>
+            {mainItems}
+          </Group>
+        </Box>
+      </Drawer>
+    </>
   );
 }

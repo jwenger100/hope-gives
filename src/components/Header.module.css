@@ -15,10 +15,16 @@
 
 .header {
   height: rem(60px);
-  background-color: var(--mantine-color-body);
+  position: fixed; /* or 'sticky' depending on your design */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* for demonstration purposes; set it to your header's height */
+  z-index: 10; /* so that it's above the main content */
+  background-color: white;
   border-bottom: rem(1px) solid
     light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-  background: linear-gradient(to left, #ffffff, #fff2cc);
+  /* background: linear-gradient(to left, #ffffff, #fff2cc); */
 }
 
 .inner {
