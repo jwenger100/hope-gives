@@ -18,7 +18,7 @@ export function GetInTouch() {
       <div className={classes.wrapper}>
         <div
           className={classes.contacts}
-          style={{ backgroundImage: `url("./bg.svg")` }}
+          style={{ backgroundImage: `url(".${process.env.NEXT_PUBLIC_BASE_PATH && '/' + process.env.NEXT_PUBLIC_BASE_PATH}/bg.svg")` }}
         >
           <Text fz="lg" fw={700} className={classes.title} c="#fff">
             Contact information

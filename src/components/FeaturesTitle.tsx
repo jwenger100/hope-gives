@@ -81,7 +81,7 @@ export function FeaturesTitle() {
     <div className={classes.wrapper}>
       <Grid gutter={80}>
         <Grid.Col span={{ base: 12, md: 5 }}>
-          <Image src="/kindness.svg" alt="kindness hands" radius="md" />
+          <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/kindness.svg`} alt="kindness hands" radius="md" />
         </Grid.Col>
         <Grid.Col span={{ base: 12, md: 7 }}>
           <Title
