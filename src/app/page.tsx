@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <HeroImageBackground />
       <Container fluid>
-        {/* <HeroBullets /> */}
+        <HeroBullets />
         <FeaturesTitle />
       </Container>
     </>
