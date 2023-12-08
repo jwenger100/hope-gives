@@ -1,0 +1,9 @@
+.wrapper {
+  color: var(--hopegives-gray);
+}
+
+.centerBtn {
+  margin: 0 auto;
+  display: block;
+  margin-top: 2rem;
+}

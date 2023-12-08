@@ -1,13 +1,5 @@
 "use client";
-import {
-  Title,
-  SimpleGrid,
-  Text,
-  ThemeIcon,
-  Grid,
-  rem,
-  Image,
-} from "@mantine/core";
+import { Title, SimpleGrid, Text, ThemeIcon, rem, Box } from "@mantine/core";
 import {
   IconPlant,
   IconGift,
@@ -78,25 +70,16 @@ export function FeaturesTitle() {
   ));
 
   return (
-    <div className={classes.wrapper}>
-      <Grid gutter={80}>
-        <Grid.Col span={{ base: 12, md: 5 }}>
-          <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH}/kindness.svg`} alt="kindness hands" radius="md" />
-        </Grid.Col>
-        <Grid.Col span={{ base: 12, md: 7 }}>
-          <Title
-            className={classes.title}
-            order={2}
-            style={{ textAlign: "center" }}
-            id="ourValues"
-          >
-            Our Values{" "}
-          </Title>
-          <SimpleGrid cols={{ base: 1, md: 2 }} spacing={30}>
-            {items}
-          </SimpleGrid>
-        </Grid.Col>
-      </Grid>
-    </div>
+    <Box className={classes.wrapper}>
+      <Title
+        className={classes.title}
+        order={2}
+        style={{ textAlign: "center" }}
+        id="ourValues"
+      >
+        Our Values{" "}
+      </Title>
+      <SimpleGrid cols={{ base: 1, md: 2 }}>{items}</SimpleGrid>
+    </Box>
   );
 }

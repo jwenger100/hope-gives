@@ -1,0 +1,7 @@
+.bannerBackground {
+  width: calc(100% + 32px); /* Extend the width */
+  margin-left: -16px; /* Offset the parent's left margin */
+  margin-right: -16px; /* Offset the parent's right margin */
+  height: 250px;
+  background-color: lightgray;
+}

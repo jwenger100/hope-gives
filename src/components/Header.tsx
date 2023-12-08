@@ -9,6 +9,7 @@ import {
   Portal,
   rem,
   Drawer,
+  Button,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Header.module.css";
@@ -24,11 +25,17 @@ export function Header() {
   const pinned = useHeadroom({ fixedAt: 120 });
   const pathname = usePathname();
 
+  // const mainLinks = [
+  //   // { link: pathname === "/blog" ? "/" : "#ourValues", label: "Our Values" },
+  //   { link: pathname === "/about" ? "/" : "/about", label: "About Us" },
+  //   { link: pathname === "/blog" ? "/" : "/contact", label: "Contact" },
+  //   // { link: pathname === "/" ? "/blog#blog" : "/blog", label: "Blog" },
+  // ];
+
   const mainLinks = [
-    // { link: pathname === "/blog" ? "/" : "#ourValues", label: "Our Values" },
-    { link: pathname === "/about" ? "/" : "/about", label: "About Us" },
-    { link: pathname === "/blog" ? "/" : "/contact", label: "Contact" },
-    // { link: pathname === "/" ? "/blog#blog" : "/blog", label: "Blog" },
+    { link: "/searchStories", label: "Search Stories" },
+    { link: "/forNonprofit/Churches", label: "For Nonprofits/Churches" },
+    { link: "/howItWorks", label: "How It Works" },
   ];
 
   const mainItems = mainLinks.map((item, index) => (
@@ -49,7 +56,7 @@ export function Header() {
         <Container className={classes.inner}>
           <Link href="/" onClick={() => setActive(-1)}>
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-full-color.png`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-SideBySide.png`}
               alt="Hope Gives"
               height={isMobile ? 40 : 50}
               width={isMobile ? 40 : 50}
@@ -58,6 +65,14 @@ export function Header() {
           <Box className={classes.links} visibleFrom="sm">
             <Group gap={0} justify="flex-end" className={classes.mainLinks}>
               {mainItems}
+              <Button
+                radius="xl"
+                size="xs"
+                mb={"8px"}
+                className={`hopegives-button`}
+              >
+                Create a Fundraiser
+              </Button>
             </Group>
           </Box>
           <Burger

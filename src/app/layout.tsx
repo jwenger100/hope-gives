@@ -27,7 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-Icon1.png`} />
+        <link
+          rel="icon"
+          type="image/png"
+          href={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-Icon1.png`}
+        />
       </head>
       <body className={quicksand.className}>
         <ThemeProvider>
