@@ -1,7 +1,42 @@
 .bannerBackground {
-  width: calc(100% + 32px); /* Extend the width */
-  margin-left: -16px; /* Offset the parent's left margin */
-  margin-right: -16px; /* Offset the parent's right margin */
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  margin-right: -16px;
   height: 250px;
   background-color: lightgray;
+  display: flex; /* Add flex display */
+  justify-content: start; /* Start items from the left */
+  align-items: center; /* Center items vertically */
+}
+
+.hopeGivesIcon {
+  object-fit: contain;
+  width: auto;
+  opacity: 0.3;
+  margin-right: -60px; /* Adjusted to align to the right */
+}
+
+.hopeGivesTextContainer {
+  margin-left: 350px;
+}
+
+.hopeGivesText {
+  font-size: calc(2.75rem * var(--mantine-scale));
+  line-height: 1.2;
+  color: var(--hopegives-gray);
+  display: inline;
+  span {
+    font-weight: bold;
+  }
+}
+
+.typewriterWrapper {
+  font-size: calc(2.75rem * var(--mantine-scale));
+  line-height: 1.2;
+  color: var(--hopegives-gray);
+}
+
+.typewriterCursor {
+  color: var(--hopegives-gray);
+  font-size: calc(2.75rem * var(--mantine-scale));
 }

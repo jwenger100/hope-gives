@@ -9,6 +9,7 @@ import { FooterSocial } from "@/components/FooterSocial";
 import { HeroImageBackground } from "@/components/HeroImageBackground";
 import DonationImpactTracker from "@/components/DonationImpactTracker";
 import HopeGivesBanner from "@/components/HopeGivesBanner";
+import HowItWorks from "@/components/HowItWorks";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <DonationImpactTracker />
         <HopeGivesBanner />
         {/* <HeroBullets /> */}
+        {/* <HowItWorks /> */}
         <FeaturesTitle />
       </Container>
     </>
