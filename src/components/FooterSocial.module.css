@@ -1,27 +1,28 @@
-.footer {
-  margin-top: rem(120px);
+.footerBorder {
   border-top: rem(1px) solid
     light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  /* padding-top: 10px; */
 }
-
-.inner {
+.wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  padding-top: var(--mantine-spacing-xl);
-  padding-bottom: var(--mantine-spacing-xl);
+  height: 200px;
+}
+.footerFlexItem {
+  flex: 1; /* This makes each item grow equally, taking up 1/4th of the space */
 
-  @media (max-width: $mantine-breakpoint-xs) {
-    flex-direction: column;
-    /* image width does not expand at xs breakpoint */
-    img {
-      width: 70px;
-    }
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-basis: 100%; /* On small screens, each item takes the full width of the container */
   }
 }
-
-.links {
-  @media (max-width: $mantine-breakpoint-xs) {
-    margin-top: var(--mantine-spacing-md);
+.footerLogo {
+  object-fit: contain;
+  margin: 0 auto;
+  height: 100px;
+  width: 70px;
+  @media (max-width: $mantine-breakpoint-sm) {
+    height: 50px;
+    width: 50px;
   }
 }
