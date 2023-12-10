@@ -1,0 +1,7 @@
+.nonProfitsButton {
+  display: block;
+  margin-left: 73%;
+  @media (max-width: $mantine-breakpoint-sm) {
+    margin: 0 auto;
+  }
+}

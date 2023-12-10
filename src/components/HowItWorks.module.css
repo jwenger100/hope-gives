@@ -1,0 +1,39 @@
+/* HowItWorksComponent.css */
+
+.howItWorksCard {
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.howItWorksTitle {
+  color: var(--hopegives-gray);
+}
+
+.howItWorksStep {
+  font-size: 18px;
+  color: white;
+  background-color: var(--hopegives-yellow);
+  width: 375px;
+  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.howItWorksLastButton {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.howItWorksButtonCreate:hover,
+.howItWorksButtonDonate:hover {
+  background-color: #e8a029; /* Darker shade for hover effect */
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .howItWorksCard {
+    margin-bottom: 20px;
+  }
+}

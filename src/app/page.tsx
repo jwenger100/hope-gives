@@ -10,6 +10,7 @@ import { HeroImageBackground } from "@/components/HeroImageBackground";
 import DonationImpactTracker from "@/components/DonationImpactTracker";
 import HopeGivesBanner from "@/components/HopeGivesBanner";
 import HowItWorks from "@/components/HowItWorks";
+import Nonprofits from "@/components/Nonprofits";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
         <DonationImpactTracker />
         <HopeGivesBanner />
         {/* <HeroBullets /> */}
-        {/* <HowItWorks /> */}
+        <HowItWorks />
+        <Nonprofits />
         <FeaturesTitle />
       </Container>
     </>

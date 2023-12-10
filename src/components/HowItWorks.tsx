@@ -1,50 +1,167 @@
 // HowItWorksComponent.jsx
 "use client";
 import React from "react";
-import { Grid, Box, Card, Text, Button } from "@mantine/core";
+import { Grid, Box, Card, Text, Button, Title, Avatar } from "@mantine/core";
 import classes from "./HowItWorks.module.css"; // Import the CSS file
+import { IconCircle1Filled } from "@tabler/icons-react";
 
 const HowItWorksComponent = () => {
   return (
-    <Box className="how-it-works-container">
-      <Grid gutter="xl" grow>
+    <Box>
+      <Title mt="xl" ta="center" style={{ color: "var(--hopegives-gray)" }}>
+        How It Works?{" "}
+      </Title>
+      <Grid gutter="xl">
         <Grid.Col span={{ base: 12, md: 6 }}>
-          <Card shadow="sm" p="lg" className="how-it-works-card">
-            {/* weight={500} */}
-            <Text size="lg" mb="md" className="how-it-works-title">
+          <Card
+            withBorder
+            shadow="sm"
+            p="lg"
+            className={classes.howItWorksCard}
+          >
+            <Title size="h2" mb="lg" className={classes.howItWorksTitle}>
               Have a need?
-            </Text>
-            <Text mb="xs" className="how-it-works-step">
-              1. Sign up
-            </Text>
-            <Text mb="xs" className="how-it-works-step">
-              2. Tell your story
-            </Text>
-            <Text mb="xs" className="how-it-works-step">
-              3. Share with others
-            </Text>
-            <Button className="how-it-works-button-create">
+            </Title>
+            <Button
+              radius="xl"
+              size="xs"
+              mb="xl"
+              className={classes.howItWorksStep}
+              leftSection={
+                <Avatar
+                  color="indigo"
+                  variant="filled"
+                  size={36}
+                  style={{ marginLeft: "-131px", marginBottom: "35px" }}
+                >
+                  1
+                </Avatar>
+              }
+            >
+              Sign up
+            </Button>
+            <Button
+              radius="xl"
+              size="xs"
+              mb="xl"
+              className={classes.howItWorksStep}
+              leftSection={
+                <Avatar
+                  color="indigo"
+                  variant="filled"
+                  size={36}
+                  style={{ marginLeft: "-101px", marginBottom: "35px" }}
+                >
+                  2
+                </Avatar>
+              }
+            >
+              {" "}
+              Tell your story
+            </Button>
+            <Button
+              radius="xl"
+              size="xs"
+              mb="xl"
+              className={classes.howItWorksStep}
+              leftSection={
+                <Avatar
+                  color="indigo"
+                  variant="filled"
+                  size={36}
+                  style={{ marginLeft: "-88px", marginBottom: "35px" }}
+                >
+                  3
+                </Avatar>
+              }
+            >
+              Share with others
+            </Button>
+            <Button
+              ta="center"
+              radius="xl"
+              size="md"
+              className={`hopegives-button ${classes.howItWorksLastButton}`}
+              w={250}
+            >
               Create a Fundraiser
             </Button>
           </Card>
         </Grid.Col>
-
         <Grid.Col span={{ base: 12, md: 6 }}>
-          <Card shadow="sm" p="lg" className="how-it-works-card">
-            {/* weight={500} */}
-            <Text size="lg" mb="md" className="how-it-works-title">
+          <Card
+            shadow="sm"
+            p="lg"
+            withBorder
+            className={classes.howItWorksCard}
+          >
+            <Title size="h2" mb="lg" className={classes.howItWorksTitle}>
               Make a donation
-            </Text>
-            <Text mb="xs" className="how-it-works-step">
-              1. Find a story and Donate
-            </Text>
-            <Text mb="xs" className="how-it-works-step">
-              2. Feel the impact of your donation
-            </Text>
-            <Text mb="xs" className="how-it-works-step">
-              3. Counts as charitable tax donation
-            </Text>
-            <Button className="how-it-works-button-donate">Donate Now</Button>
+            </Title>
+            <Button
+              radius="xl"
+              size="xs"
+              mb="xl"
+              className={classes.howItWorksStep}
+              leftSection={
+                <Avatar
+                  color="indigo"
+                  variant="filled"
+                  size={36}
+                  style={{ marginLeft: "-61px", marginBottom: "35px" }}
+                >
+                  1
+                </Avatar>
+              }
+            >
+              Find a story and donate
+            </Button>
+            <Button
+              radius="xl"
+              size="xs"
+              mb="xl"
+              className={classes.howItWorksStep}
+              leftSection={
+                <Avatar
+                  color="indigo"
+                  variant="filled"
+                  size={36}
+                  style={{ marginLeft: "-7px", marginBottom: "35px" }}
+                >
+                  2
+                </Avatar>
+              }
+            >
+              {" "}
+              Feel the impact of your donation
+            </Button>
+            <Button
+              radius="xl"
+              size="xs"
+              mb="xl"
+              className={classes.howItWorksStep}
+              leftSection={
+                <Avatar
+                  color="indigo"
+                  variant="filled"
+                  size={36}
+                  style={{ marginLeft: "-3px", marginBottom: "35px" }}
+                >
+                  3
+                </Avatar>
+              }
+            >
+              Counts as charitable tax donation
+            </Button>
+            <Button
+              ta="center"
+              radius="xl"
+              size="md"
+              className={`hopegives-button ${classes.howItWorksLastButton}`}
+              w={250}
+            >
+              Donate Now{" "}
+            </Button>
           </Card>
         </Grid.Col>
       </Grid>
