@@ -60,6 +60,7 @@ export function Header() {
               alt="Hope Gives"
               height={isMobile ? 40 : 50}
               width={isMobile ? 40 : 50}
+              className={classes.headerLogo}
             />
           </Link>
           <Box className={classes.links} visibleFrom="sm">

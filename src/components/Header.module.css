@@ -27,6 +27,10 @@
   /* background: linear-gradient(to left, #ffffff, #fff2cc); */
 }
 
+.headerLogo {
+  object-fit: contain;
+}
+
 .inner {
   height: rem(60px);
   display: flex;
