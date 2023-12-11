@@ -25,14 +25,12 @@ const DonationImpactTracker = () => {
               />
             </Box>
             <Title order={3} ta="center">
-              Authentic Giving
+              Accountable Giving
             </Title>
-            {/* <h1>Authentic Giving</h1> */}
             <Text ta="center">
               Track your giving and witness the impact of every donation.
             </Text>
           </Grid.Col>
-          {/* Authentic Stories Column */}
           <Grid.Col span={{ base: 12, md: 4 }}>
             <Box ta="center">
               <IconHeartHandshake
@@ -59,7 +57,7 @@ const DonationImpactTracker = () => {
               />
             </Box>
             <Title order={3} ta="center">
-              Authentic Hope
+              Audacious Hope
             </Title>
             <Text ta="center">
               It's about fostering an audacious hope that believes in the power
