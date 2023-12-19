@@ -25,6 +25,7 @@
     var(--hopegives-yellow)
   ) !important;
   transition: all 0.3s ease;
+  color: var(--hopegives-gray) !important;
 }
 
 .hopegives-button:hover {
