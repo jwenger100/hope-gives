@@ -32,7 +32,7 @@
 }
 
 /* Responsive behavior */
-@media (max-width: 768px) {
+@media (max-width: $mantine-breakpoint-sm) {
   .howItWorksCard {
     margin-bottom: 20px;
   }

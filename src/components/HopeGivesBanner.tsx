@@ -14,28 +14,33 @@ const HopeGivesBanner = () => {
         width={"50px"}
         className={classes.hopeGivesIcon}
       />{" "}
-      <Box className={classes.hopeGivesTextContainer}>
-        <Text className={classes.hopeGivesText}>
-          Hope<span>Gives</span>&nbsp;
-        </Text>
+      <Box className={classes.hopeGivesWrapper}>
+        <Box className={classes.hopeGivesTextContainer}>
+          <Text className={classes.hopeGivesText}>
+            Hope<span>Gives</span>&nbsp;
+          </Text>
+        </Box>
+        <Box className={classes.hopeGivesTypewriterTextBox}>
+          <Typewriter
+            options={{
+              strings: [
+                "Gas",
+                "Food",
+                "Travel",
+                "Relief",
+                "Prayers",
+                "Love",
+                "Support",
+                "Care",
+              ],
+              autoStart: true,
+              loop: true,
+              wrapperClassName: classes.typewriterWrapper,
+              cursorClassName: classes.typewriterCursor,
+            }}
+          />
+        </Box>
       </Box>
-      <Typewriter
-        options={{
-          strings: [
-            "Gas",
-            "Food",
-            "Travel",
-            "Emergency Relief",
-            "Prayers",
-            "Accountability",
-            "Authenticity",
-          ],
-          autoStart: true,
-          loop: true,
-          wrapperClassName: classes.typewriterWrapper,
-          cursorClassName: classes.typewriterCursor,
-        }}
-      />
     </Box>
   );
 };
