@@ -8,20 +8,11 @@ import {
   Card,
   Text,
   Button,
-  List,
-  ThemeIcon,
   Paper,
   Title,
-  Group,
+  Box,
+  Image,
 } from "@mantine/core";
-import {
-  IconCheck,
-  IconMessageCircle,
-  IconShare,
-  IconWand,
-  IconCoin,
-  IconSearch,
-} from "@tabler/icons-react";
 
 const HowItWorksComponent = () => {
   return (
@@ -30,67 +21,72 @@ const HowItWorksComponent = () => {
       pb={"md"}
       mb={"xl"}
     >
+      {/* How it works */}
       <Card padding="lg" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
         <Title mt="lg" mb="xl" ta="center" c="var(--hopegives-gray)">
           How it Works
         </Title>
-        <Grid justify="center" align="center">
-          <Grid.Col
-            span={{ base: 12, sm: 4 }}
-            style={{ display: "flex", justifyContent: "center" }}
-          >
-            {/* Column content */}
-            <div>
-              <Group align="center">
-                <ThemeIcon color="primary" variant="light">
-                  <IconCheck size={18} />
-                </ThemeIcon>
-                <Text>1. Create a fundraiser</Text>
-              </Group>
-              <List size="sm" withPadding ml={"30px"}>
-                <List.Item>Set your goal</List.Item>
-                <List.Item>Tell your story</List.Item>
-                <List.Item style={{ visibility: "hidden" }}></List.Item>
-              </List>
-            </div>
+        <Grid>
+          <Grid.Col span={{ base: 12, md: 1 }}>
+            <Box ta="center">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/expectation.svg`}
+                width={48}
+                height={60}
+                alt="expectation"
+                style={{
+                  objectFit: "unset",
+                }}
+              />
+            </Box>
           </Grid.Col>
-          <Grid.Col
-            span={{ base: 12, sm: 4 }}
-            style={{ display: "flex", justifyContent: "center" }}
-          >
-            {/* Column content */}
-            <div>
-              <Group align="center">
-                <ThemeIcon color="primary" variant="light">
-                  <IconShare size={18} />
-                </ThemeIcon>
-                <Text>2. Share with others</Text>
-              </Group>
-              <List size="sm" withPadding ml={"30px"}>
-                <List.Item>Send text messages</List.Item>
-                <List.Item>Send emails</List.Item>
-                <List.Item>Share on social media</List.Item>
-              </List>
-            </div>
+          <Grid.Col span={{ base: 12, md: 3 }}>
+            <Title order={4} ta="center">
+              Create a Fundraiser
+            </Title>
+            <Text ta="center">Set your goal</Text>
+            <Text ta="center">Tell your story</Text>
           </Grid.Col>
-          <Grid.Col
-            span={{ base: 12, sm: 4 }}
-            style={{ display: "flex", justifyContent: "center" }}
-          >
-            {/* Column content */}
-            <div>
-              <Group align="center">
-                <ThemeIcon color="primary" variant="light">
-                  <IconWand size={18} />
-                </ThemeIcon>
-                <Text>3. Manage Donations</Text>
-              </Group>
-              <List size="sm" withPadding ml={"30px"}>
-                <List.Item>Collect funds</List.Item>
-                <List.Item>Thank donors</List.Item>
-                <List.Item style={{ visibility: "hidden" }}></List.Item>
-              </List>
-            </div>
+          <Grid.Col span={{ base: 12, md: 1 }}>
+            <Box ta="center">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/megaphone.svg`}
+                width={48}
+                height={60}
+                alt="megaphone"
+                style={{
+                  objectFit: "unset",
+                }}
+              />
+            </Box>
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, md: 3 }}>
+            <Title order={4} ta="center">
+              Share with Others
+            </Title>
+            <Text ta="center">Send text messages</Text>
+            <Text ta="center">Send emails</Text>
+            <Text ta="center">Share on Social Media</Text>
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, md: 1 }}>
+            <Box ta="center">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/monitor.svg`}
+                width={48}
+                height={60}
+                alt="megaphone"
+                style={{
+                  objectFit: "unset",
+                }}
+              />
+            </Box>
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, md: 3 }}>
+            <Title order={4} ta="center">
+              Manage Donations
+            </Title>
+            <Text ta="center">Collect funds</Text>
+            <Text ta="center">Thank donors</Text>
           </Grid.Col>
         </Grid>
         <Button
@@ -126,63 +122,66 @@ const HowItWorksComponent = () => {
         <Title mb="xl" mt="lg" ta="center" c="var(--hopegives-gray)">
           For Donors
         </Title>
-        <Grid justify="center" align="center">
-          <Grid.Col
-            span={{ base: 12, sm: 4 }}
-            style={{ display: "flex", justifyContent: "center" }}
-          >
-            {/* Column content */}
-            <div>
-              <Group align="center">
-                <ThemeIcon color="primary" variant="light">
-                  <IconSearch size={18} />
-                </ThemeIcon>
-                <Text>1. Find a story</Text>
-              </Group>
-              <List size="sm" withPadding ml={"30px"}>
-                <List.Item>Browse Stories</List.Item>
-                <List.Item>Donate to a cause</List.Item>
-                <List.Item style={{ visibility: "hidden" }}></List.Item>
-              </List>
-            </div>
+        <Grid>
+          <Grid.Col span={{ base: 12, md: 1 }}>
+            <Box ta="center">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/search.svg`}
+                width={48}
+                height={60}
+                alt="search"
+                style={{
+                  objectFit: "unset",
+                }}
+              />
+            </Box>
           </Grid.Col>
-          <Grid.Col
-            span={{ base: 12, sm: 4 }}
-            style={{ display: "flex", justifyContent: "center" }}
-          >
-            {/* Column content */}
-            <div>
-              <Group align="center">
-                <ThemeIcon color="primary" variant="light">
-                  <IconMessageCircle size={18} />
-                </ThemeIcon>
-                <Text>2. Feel the Impact</Text>
-              </Group>
-              <List size="sm" withPadding ml={"30px"}>
-                <List.Item>Send prayers and messages</List.Item>
-                <List.Item>Follow each donation dollar</List.Item>
-                <List.Item style={{ visibility: "hidden" }}></List.Item>
-              </List>
-            </div>
+          <Grid.Col span={{ base: 12, md: 3 }}>
+            <Title order={4} ta="center">
+              Find a Story{" "}
+            </Title>
+            <Text ta="center">Browse stories</Text>
+            <Text ta="center">Donate to a cause</Text>
           </Grid.Col>
-          <Grid.Col
-            span={{ base: 12, sm: 4 }}
-            style={{ display: "flex", justifyContent: "center" }}
-          >
-            {/* Column content */}
-            <div>
-              <Group align="center">
-                <ThemeIcon color="primary" variant="light">
-                  <IconCoin size={18} />
-                </ThemeIcon>
-                <Text>3. Get Rewards</Text>
-              </Group>
-              <List size="sm" withPadding ml={"30px"}>
-                <List.Item>Counts as a charitable tax donation</List.Item>
-                <List.Item>Receive credit card rewards</List.Item>
-                <List.Item style={{ visibility: "hidden" }}></List.Item>
-              </List>
-            </div>
+          <Grid.Col span={{ base: 12, md: 1 }}>
+            <Box ta="center">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/solidarity.svg`}
+                width={48}
+                height={60}
+                alt="solidarity"
+                style={{
+                  objectFit: "unset",
+                }}
+              />
+            </Box>
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, md: 3 }}>
+            <Title order={4} ta="center">
+              Feel the impact
+            </Title>
+            <Text ta="center">Send prayers and messages</Text>
+            <Text ta="center">Follow each donation dollar</Text>
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, md: 1 }}>
+            <Box ta="center">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/rating.svg`}
+                width={48}
+                height={60}
+                alt="rating"
+                style={{
+                  objectFit: "unset",
+                }}
+              />
+            </Box>
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, md: 3 }}>
+            <Title order={4} ta="center">
+              Get Rewards
+            </Title>
+            <Text ta="center">Counts as a charitable tax donation</Text>
+            <Text ta="center">Receive credit card rewards</Text>
           </Grid.Col>
         </Grid>
         <Button
