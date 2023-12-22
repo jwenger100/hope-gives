@@ -21,12 +21,13 @@
 
 .title {
   font-weight: 800;
-  font-size: rem(40px);
+  font-size: rem(50px);
   letter-spacing: rem(-1px);
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
   color: var(--mantine-color-white);
   margin-bottom: var(--mantine-spacing-xs);
+  margin-top: var(--mantine-spacing-xl);
   text-align: center;
 
   @media (max-width: $mantine-breakpoint-xs) {

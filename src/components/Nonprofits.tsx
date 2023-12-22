@@ -23,7 +23,7 @@ const Nonprofits = () => {
       >
         <Container size="md" ta={{ base: "left", sm: "center" }}>
           <Title mt="xl" mb="md" style={{ color: "var(--hopegives-gray)" }}>
-            For Nonprofits/Churches
+            For Nonprofits
           </Title>
           <List className={classes.nonprofitsList}>
             <List.Item>Get access to the donation you need.</List.Item>

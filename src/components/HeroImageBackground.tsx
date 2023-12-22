@@ -28,8 +28,13 @@ export function HeroImageBackground() {
     >
       <Overlay color="#ffc200" opacity={0.4} zIndex={1} />
 
-      <div className={classes.inner}>
-        <Title className={classes.title}>Hope through social fundraising</Title>
+      <Box className={classes.inner}>
+        <Title className={classes.title} ta={"center"}>
+          Hope through social fundraising
+        </Title>
+        <Text className={classes.description} ta={"center"}>
+          Tired of not knowing if your giving is making a difference.
+        </Text>
 
         {/* <Container size={640}>
           <Text size="lg" className={classes.description}>
@@ -37,7 +42,7 @@ export function HeroImageBackground() {
           </Text>
         </Container> */}
 
-        <div className={classes.controls}>
+        <Box className={classes.controls}>
           <Button
             radius="xl"
             size="md"
@@ -45,8 +50,8 @@ export function HeroImageBackground() {
           >
             Create a Fundraiser
           </Button>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </Box>
   );
 }

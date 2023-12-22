@@ -20,7 +20,7 @@
   object-fit: contain;
   margin: 0 auto;
   height: 100px;
-  width: 70px;
+  width: 100px;
   @media (max-width: $mantine-breakpoint-sm) {
     height: 50px;
     width: 50px;

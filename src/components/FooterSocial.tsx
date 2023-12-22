@@ -26,8 +26,6 @@ export function FooterSocial() {
           <Image
             src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-full-color.png`}
             alt="footer-logo"
-            width={70}
-            height={100}
             className={classes.footerLogo}
           />
         </Box>
