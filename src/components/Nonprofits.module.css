@@ -1,3 +1,29 @@
+.outerWrapper {
+  padding: 6rem; /*Add 3rem padding to create white space */
+  background-color: white; /* Set background color to white */
+  /* Adjust other styling as needed (e.g., margin, width) */
+  width: calc(100% + 35px);
+  margin-left: -16px;
+  margin-right: -16px;
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: 0;
+  }
+}
+.nonprofitsWrapper {
+  height: 850px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ebebeb;
+  background-image: var(--background-image-url);
+  padding-top: calc(rem(280px));
+  padding-bottom: calc(rem(130px));
+  border-radius: var(--mantine-radius-xl);
+  @media (max-width: $mantine-breakpoint-sm) {
+    border-radius: 0;
+  }
+}
+
 .nonProfitsButton {
   display: block;
   margin-left: 73%;
