@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { HeroBullets } from "@/components/HeroBullets";
 import { FeaturesTitle } from "@/components/FeaturesTitle";
 import { UserCards } from "@/components/UserCards";
 import { Container } from "@mantine/core";
@@ -11,6 +10,7 @@ import DonationImpactTracker from "@/components/DonationImpactTracker";
 import HopeGivesBanner from "@/components/HopeGivesBanner";
 import HowItWorks from "@/components/HowItWorks";
 import Nonprofits from "@/components/Nonprofits";
+import ForChurchesBanner from "@/components/ForChurchesBanner";
 
 export default function Home() {
   return (
@@ -19,8 +19,8 @@ export default function Home() {
       <Container fluid>
         <DonationImpactTracker />
         <HopeGivesBanner />
-        {/* <HeroBullets /> */}
         <HowItWorks />
+        <ForChurchesBanner />
         <Nonprofits />
         <FeaturesTitle />
       </Container>

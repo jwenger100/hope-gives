@@ -1,7 +1,6 @@
 "use client";
 import {
   Container,
-  Group,
   ActionIcon,
   rem,
   Image,
@@ -10,8 +9,10 @@ import {
   Text,
 } from "@mantine/core";
 import {
+  IconBrandFacebook,
+  IconBrandLinkedin,
+  IconBrandTiktok,
   IconBrandTwitter,
-  IconBrandYoutube,
   IconBrandInstagram,
 } from "@tabler/icons-react";
 import classes from "./FooterSocial.module.css";
@@ -48,24 +49,91 @@ export function FooterSocial() {
           <Text ta="center">Pricing</Text>
           <Text ta="center">Contact Us</Text>
         </Box>
-        <Box className={classes.footerFlexItem} ta="center">
-          <ActionIcon size="lg" color="gray" variant="subtle">
+        <Box className={classes.footerFlexItem} ta="center" mt={"sm"} pb={"sm"}>
+          {/* Twitter/X */}
+          <ActionIcon
+            size="lg"
+            color="var(--hopegives-orange)"
+            variant="subtle"
+            // change this to the actual link
+            component="a"
+            href="https://twitter.com/hopegives"
+            aria-label="Open in a new tab"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <IconBrandTwitter
-              style={{ width: rem(18), height: rem(18) }}
+              style={{ width: rem(24), height: rem(24) }}
               stroke={1.5}
-            />
+            ></IconBrandTwitter>
           </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
-            <IconBrandYoutube
-              style={{ width: rem(18), height: rem(18) }}
+          {/* Facebook */}
+          <ActionIcon
+            size="lg"
+            color="var(--hopegives-orange)"
+            variant="subtle"
+            // change this to the actual link
+            component="a"
+            href="https://www.facebook.com/profile.php?id=61554668333804"
+            aria-label="Open in a new tab"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconBrandFacebook
+              style={{ width: rem(24), height: rem(24) }}
               stroke={1.5}
-            />
+            ></IconBrandFacebook>
           </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          {/* Instagram */}
+          <ActionIcon
+            size="lg"
+            color="var(--hopegives-orange)"
+            variant="subtle"
+            // change this to the actual link
+            component="a"
+            href="https://www.instagram.com/hopegives_/?utm_source=qr"
+            aria-label="Open in a new tab"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <IconBrandInstagram
-              style={{ width: rem(18), height: rem(18) }}
+              style={{ width: rem(24), height: rem(24) }}
               stroke={1.5}
-            />
+            ></IconBrandInstagram>
+          </ActionIcon>
+          {/* LinkedIn */}
+          <ActionIcon
+            size="lg"
+            color="var(--hopegives-orange)"
+            variant="subtle"
+            // change this to the actual link
+            component="a"
+            href="https://www.linkedin.com/company/hopegivesinc/"
+            aria-label="Open in a new tab"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconBrandLinkedin
+              style={{ width: rem(24), height: rem(24) }}
+              stroke={1.5}
+            ></IconBrandLinkedin>
+          </ActionIcon>
+          {/* Tiktok */}
+          <ActionIcon
+            size="lg"
+            color="var(--hopegives-orange)"
+            variant="subtle"
+            // change this to the actual link
+            component="a"
+            href="https://www.tiktok.com/@hopegives"
+            aria-label="Open in a new tab"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconBrandTiktok
+              style={{ width: rem(24), height: rem(24) }}
+              stroke={1.5}
+            ></IconBrandTiktok>
           </ActionIcon>
         </Box>
       </Container>

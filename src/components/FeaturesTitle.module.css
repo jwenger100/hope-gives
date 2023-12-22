@@ -1,11 +1,39 @@
 .wrapper {
   padding: calc(var(--mantine-spacing-xl) * 2) var(--mantine-spacing-xl);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--background-image-url);
+  height: auto;
+  width: calc(100% + 35px);
+  margin-left: -16px;
+  margin-right: -16px;
 }
 
 .title {
   font-size: rem(36px);
   font-weight: 900;
   line-height: 1.1;
-  margin-bottom: var(--mantine-spacing-md);
+  margin-bottom: var(--mantine-spacing-xl);
+  color: white;
+}
+
+.item {
+  background-color: white;
   color: var(--hopegives-gray);
+  border-radius: var(--mantine-radius-md);
+  padding: var(--mantine-spacing-lg);
+  text-align: center;
+  box-shadow: var(--mantine-shadow-md);
+  border: rem(2px) solid
+    light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.05); /* Slightly increase the size */
+  box-shadow: var(--mantine-shadow-lg); /* Enhance the shadow */
+  border-color: var(--hopegives-yellow); /* Change the border color */
+  color: var(--hopegives-yellow); /* Change the text color */
 }

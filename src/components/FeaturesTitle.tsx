@@ -6,6 +6,7 @@ import {
   IconCrown,
   IconEmpathize,
   IconHandStop,
+  IconGrowth,
 } from "@tabler/icons-react";
 import classes from "./FeaturesTitle.module.css";
 
@@ -40,11 +41,17 @@ const features = [
     description:
       "We strive to be a tangible expression of faith – the hands that extend in generosity and care. Just as hands are vital for action, our community collaboratively works, reaching out and helping in harmony.",
   },
+  {
+    icon: IconGrowth,
+    title: "Growth",
+    description:
+      "At the heart of our mission is the belief that every individual has the potential to grow and flourish. By nurturing talents, providing resources, and creating opportunities for personal and communal development, we empower individuals to reach their full potential.",
+  },
 ];
 
 export function FeaturesTitle() {
   const items = features.map((feature) => (
-    <div key={feature.title}>
+    <Box key={feature.title} className={classes.item}>
       <ThemeIcon
         size={44}
         radius="md"
@@ -63,14 +70,19 @@ export function FeaturesTitle() {
       <Text fz="lg" mt="sm" fw={500}>
         {feature.title}
       </Text>
-      <Text c="dimmed" fz="sm">
+      <Text fz="sm" className={classes.itemDescription}>
         {feature.description}
       </Text>
-    </div>
+    </Box>
   ));
 
   return (
-    <Box className={classes.wrapper}>
+    <Box
+      className={classes.wrapper}
+      style={{
+        "--background-image-url": `url(${process.env.NEXT_PUBLIC_BASE_PATH}/growth.png)`,
+      }}
+    >
       <Title
         className={classes.title}
         order={2}
@@ -79,7 +91,9 @@ export function FeaturesTitle() {
       >
         Our Values{" "}
       </Title>
-      <SimpleGrid cols={{ base: 1, md: 2 }}>{items}</SimpleGrid>
+      <SimpleGrid cols={{ base: 1, md: 2 }} spacing={"xl"}>
+        {items}
+      </SimpleGrid>
     </Box>
   );
 }

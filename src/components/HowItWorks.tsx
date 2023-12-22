@@ -17,9 +17,14 @@ import {
 const HowItWorksComponent = () => {
   return (
     <Container
-      style={{ boxShadow: "var(--mantine-shadow-lg)", borderRadius: "20px" }}
+      style={{
+        boxShadow: "var(--mantine-shadow-lg)",
+        borderRadius: "20px",
+        border: "1.25px solid #dee2e6",
+      }}
       pb={"md"}
       mb={"xl"}
+      mt={"xl"}
     >
       {/* How it works */}
       <Card padding="lg" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
