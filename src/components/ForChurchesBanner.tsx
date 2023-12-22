@@ -18,7 +18,7 @@ const ForChurchesBanner = () => {
         <Box
           className={classes.backgroundImage}
           style={{
-            "--background-image-url": `url(${process.env.NEXT_PUBLIC_BASE_PATH}/church-interior.jpg)`,
+            "--background-image-url": `url(${process.env.NEXT_PUBLIC_BASE_PATH}/church-Interior.jpg)`,
           }}
         ></Box>
         {/* <Overlay color="#594f3e" opacity={1} zIndex={1} /> */}
