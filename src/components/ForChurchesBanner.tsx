@@ -14,7 +14,7 @@ import { IconBuildingChurch } from "@tabler/icons-react";
 const ForChurchesBanner = () => {
   return (
     <>
-      <Box className={classes.backgroundImageWrapper} mt="60px">
+      <Box className={classes.backgroundImageWrapper} mt="60px" id="churches">
         <Box
           className={classes.backgroundImage}
           style={{

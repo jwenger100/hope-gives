@@ -1,5 +1,13 @@
 "use client";
-import { Title, SimpleGrid, Text, ThemeIcon, rem, Box } from "@mantine/core";
+import {
+  Title,
+  SimpleGrid,
+  Text,
+  ThemeIcon,
+  rem,
+  Box,
+  Overlay,
+} from "@mantine/core";
 import {
   IconPlant,
   IconGift,
@@ -80,7 +88,7 @@ export function FeaturesTitle() {
     <Box
       className={classes.wrapper}
       style={{
-        "--background-image-url": `url(${process.env.NEXT_PUBLIC_BASE_PATH}/growth.png)`,
+        "--background-image-url": `url(${process.env.NEXT_PUBLIC_BASE_PATH}/happy-people.jpg)`,
       }}
     >
       <Title

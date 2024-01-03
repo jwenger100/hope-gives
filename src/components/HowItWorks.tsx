@@ -25,10 +25,11 @@ const HowItWorksComponent = () => {
       pb={"md"}
       mb={"xl"}
       mt={"xl"}
+      id="howItWorks"
     >
       {/* How it works */}
       <Card padding="lg" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
-        <Title mt="lg" mb="xl" ta="center" c="var(--hopegives-gray)">
+        <Title mt="sm" mb="xl" ta="center" c="var(--hopegives-gray)">
           How it Works
         </Title>
         <Grid>

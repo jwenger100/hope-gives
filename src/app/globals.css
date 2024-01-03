@@ -42,3 +42,8 @@
 .Typewriter {
   display: inline !important;
 }
+
+html{
+  /* Accounts for height of header when navigating to a section */
+  scroll-padding-top: 70px;
+}

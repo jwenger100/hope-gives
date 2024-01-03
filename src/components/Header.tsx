@@ -23,19 +23,14 @@ export function Header() {
   const [active, setActive] = useState(-1);
   const isMobile = useMediaQuery("(max-width: 750px)");
   const pinned = useHeadroom({ fixedAt: 120 });
-  const pathname = usePathname();
-
-  // const mainLinks = [
-  //   // { link: pathname === "/blog" ? "/" : "#ourValues", label: "Our Values" },
-  //   { link: pathname === "/about" ? "/" : "/about", label: "About Us" },
-  //   { link: pathname === "/blog" ? "/" : "/contact", label: "Contact" },
-  //   // { link: pathname === "/" ? "/blog#blog" : "/blog", label: "Blog" },
-  // ];
 
   const mainLinks = [
-    { link: "/searchStories", label: "Search Stories" },
-    { link: "/forNonprofit/Churches", label: "For Nonprofits/Churches" },
-    { link: "/howItWorks", label: "How It Works" },
+    { link: "#whyTrustUs", label: "Why Trust Us" },
+    { link: "#howItWorks", label: "How It Works" },
+    { link: "#churches", label: "Churches" },
+    { link: "#nonprofits", label: "Nonprofits" },
+    { link: "#ourValues", label: "Our Values" },
+    { link: "/about", label: "About" },
   ];
 
   const mainItems = mainLinks.map((item, index) => (
@@ -44,7 +39,13 @@ export function Header() {
       key={item.label}
       className={classes.mainLink}
       data-active={index === active && active !== -1 ? true : undefined}
-      onClick={() => setActive(index)}
+      onClick={() => {
+        if (item.link) {
+          setActive(index);
+          // Clear out the href value
+          item.link = "";
+        }
+      }}
     >
       {item.label}
     </Link>
@@ -63,17 +64,9 @@ export function Header() {
               className={classes.headerLogo}
             />
           </Link>
-          <Box className={classes.links} visibleFrom="sm">
+          <Box className={classes.links} visibleFrom="md">
             <Group gap={0} justify="flex-end" className={classes.mainLinks}>
               {mainItems}
-              <Button
-                radius="xl"
-                size="xs"
-                mb={"8px"}
-                className={`hopegives-button`}
-              >
-                Create a Fundraiser
-              </Button>
             </Group>
           </Box>
           <Burger
@@ -81,7 +74,7 @@ export function Header() {
             onClick={toggle}
             className={classes.burger}
             size="sm"
-            hiddenFrom="sm"
+            hiddenFrom="md"
           />
         </Container>
       </header>

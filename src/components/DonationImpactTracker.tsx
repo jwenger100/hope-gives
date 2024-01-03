@@ -7,7 +7,7 @@ import classes from "./DonationImpactTracker.module.css";
 const DonationImpactTracker = () => {
   return (
     <>
-      <Box className={classes.wrapper}>
+      <Box className={classes.wrapper} id="whyTrustUs">
         <Title mt="xl" ta="center">
           Why trust us?
         </Title>

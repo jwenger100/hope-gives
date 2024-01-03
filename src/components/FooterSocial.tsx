@@ -29,25 +29,7 @@ export function FooterSocial() {
             className={classes.footerLogo}
           />
         </Box>
-        <Box className={classes.footerFlexItem}>
-          <Title ta="center" order={5} className={classes.title}>
-            Quick Links
-          </Title>
-          <Text ta="center">Search Stories</Text>
-          <Text ta="center">Create a Story</Text>
-          <Text ta="center">How it Works</Text>
-          <Text ta="center">Our Mission</Text>
-        </Box>
-        <Box className={classes.footerFlexItem}>
-          <Title ta="center" order={5} className={classes.title}>
-            Resources{" "}
-          </Title>
-          <Text ta="center">Help</Text>
-          <Text ta="center">FAQ</Text>
-          <Text ta="center">Pricing</Text>
-          <Text ta="center">Contact Us</Text>
-        </Box>
-        <Box className={classes.footerFlexItem} ta="center" mt={"sm"} pb={"sm"}>
+        <Box className={classes.footerFlexItem} ta="center" pb={"sm"}>
           {/* Twitter/X */}
           <ActionIcon
             size="lg"

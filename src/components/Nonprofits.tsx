@@ -14,7 +14,7 @@ import classes from "./Nonprofits.module.css";
 
 const Nonprofits = () => {
   return (
-    <Box className={classes.outerWrapper}>
+    <Box className={classes.outerWrapper} id="nonprofits">
       <Paper
         style={{
           "--background-image-url": `url(${process.env.NEXT_PUBLIC_BASE_PATH}/Hands1.png)`,

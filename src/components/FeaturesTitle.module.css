@@ -3,7 +3,12 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: var(--background-image-url);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 194, 0, 0.4),
+      rgba(255, 194, 0, 0.4) /* --hopegives-yellow */
+    ),
+    var(--background-image-url);
   height: auto;
   width: calc(100% + 35px);
   margin-left: -16px;

@@ -1,5 +1,4 @@
 .outerWrapper {
-  padding: 6rem; /*Add 3rem padding to create white space */
   background-color: white; /* Set background color to white */
   /* Adjust other styling as needed (e.g., margin, width) */
   width: calc(100% + 35px);
