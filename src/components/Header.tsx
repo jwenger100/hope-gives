@@ -1,22 +1,11 @@
 "use client";
 import { useState } from "react";
-import {
-  Container,
-  Group,
-  Burger,
-  Box,
-  Image,
-  Portal,
-  rem,
-  Drawer,
-  Button,
-} from "@mantine/core";
+import { Container, Group, Burger, Box, Image, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Header.module.css";
 import { useMediaQuery } from "@mantine/hooks";
 import { useHeadroom } from "@mantine/hooks";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
@@ -25,12 +14,12 @@ export function Header() {
   const pinned = useHeadroom({ fixedAt: 120 });
 
   const mainLinks = [
-    { link: "#whyTrustUs", label: "Why Trust Us" },
-    { link: "#howItWorks", label: "How It Works" },
-    { link: "#churches", label: "Churches" },
-    { link: "#nonprofits", label: "Nonprofits" },
-    { link: "#ourValues", label: "Our Values" },
-    { link: "/about", label: "About" },
+    { link: "/#whyTrustUs", label: "Why Trust Us" },
+    { link: "/#howItWorks", label: "How It Works" },
+    { link: "/#churches", label: "Churches" },
+    { link: "/#nonprofits", label: "Nonprofits" },
+    { link: "/#ourValues", label: "Our Values" },
+    { link: "about", label: "About" },
   ];
 
   const mainItems = mainLinks.map((item, index) => (
@@ -42,8 +31,6 @@ export function Header() {
       onClick={() => {
         if (item.link) {
           setActive(index);
-          // Clear out the href value
-          item.link = "";
         }
       }}
     >
