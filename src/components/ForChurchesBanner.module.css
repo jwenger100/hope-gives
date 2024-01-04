@@ -81,6 +81,13 @@
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   z-index: 1;
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    height: rem(80px);
+    width: rem(120px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .content {
@@ -90,6 +97,12 @@
 
 .icon {
   color: var(--hopegives-yellow);
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    /* Additional styles for smaller screens */
+    display: flex;
+    margin: 0 auto;
+    margin-right: 49.2%;
+  }
 }
 
 .title {

@@ -2,6 +2,12 @@
   color: var(--hopegives-gray);
 }
 
+.item {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: var(--mantine-spacing-xl);
+  margin: var(--mantine-spacing-md);
+}
+
 .centerBtn {
   margin: 0 auto;
   display: block;

@@ -39,11 +39,10 @@
 }
 
 .links {
-  padding-top: var(--mantine-spacing-lg);
+  padding-top: var(--mantine-spacing-sm);
   height: rem(60px);
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
 }
 
 .mainLinks {
@@ -66,7 +65,7 @@
   }
 
   &[data-active] {
-    border-bottom-color: var(--hopegives-orange);
+    color: var(--hopegives-yellow);
   }
 }
 

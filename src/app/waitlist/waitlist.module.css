@@ -16,3 +16,7 @@
     padding-bottom: rem(50px);
   }
 }
+
+.container {
+  z-index: 3;
+}

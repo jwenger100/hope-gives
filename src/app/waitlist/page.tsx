@@ -9,11 +9,12 @@ import {
   Select,
   Button,
   Image,
+  Overlay,
 } from "@mantine/core";
 import classes from "./waitlist.module.css";
 import { useForm } from "@mantine/form";
 
-const Contact = () => {
+const Waitlist = () => {
   const form = useForm({
     initialValues: {
       email: "",
@@ -37,8 +38,10 @@ const Contact = () => {
         }}
         mt="60px"
       >
+        {/* <Overlay color="#ffc200" opacity={0.4} zIndex={1} /> */}
+
         <Container size="xs" p="md">
-          <Paper p="xl" withBorder shadow="md">
+          <Paper p="xl" withBorder shadow="md" className={classes.container}>
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-full-color.png`}
               alt="waitlist image"
@@ -56,7 +59,12 @@ const Contact = () => {
                 marginTop: "0.5em",
               }}
             ></Box>
-            <Title order={4} ta="center" style={{ marginBottom: "1em" }}>
+            <Title
+              order={4}
+              ta="center"
+              c={"var(--hopegives-gray)"}
+              style={{ marginBottom: "1em" }}
+            >
               Sign up for early access to the HopeGives App
             </Title>
 
@@ -109,4 +117,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Waitlist;

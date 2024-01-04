@@ -4,7 +4,6 @@
   padding-top: rem(180px);
   padding-bottom: rem(130px);
   background-size: cover;
-  /* background-position: center; */
   background-repeat: no-repeat;
   background-image: var(--background-image-url);
 
@@ -17,6 +16,9 @@
 .inner {
   position: relative;
   z-index: 1;
+  @media (max-width: $mantine-breakpoint-xs) {
+    margin-top: 30%;
+  }
 }
 
 .title {
@@ -51,7 +53,7 @@
 }
 
 .controls {
-  margin-top: calc(var(--mantine-spacing-xl) * 1.5);
+  margin-top: var(--mantine-spacing-lg);
   display: flex;
   justify-content: center;
   padding-left: var(--mantine-spacing-md);
@@ -59,6 +61,7 @@
 
   @media (max-width: $mantine-breakpoint-xs) {
     flex-direction: column;
+    margin-top: var(--mantine-spacing-xl);
   }
 }
 

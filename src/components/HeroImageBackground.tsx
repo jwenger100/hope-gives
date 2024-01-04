@@ -1,4 +1,4 @@
-import { Title, Text, Container, Button, Overlay, Box } from "@mantine/core";
+import { Title, Text, Button, Overlay, Box } from "@mantine/core";
 import Link from "next/link";
 import classes from "./HeroImageBackground.module.css";
 
@@ -7,8 +7,6 @@ export function HeroImageBackground() {
   const images = [
     `${process.env.NEXT_PUBLIC_BASE_PATH}/donations.jpg`,
     `${process.env.NEXT_PUBLIC_BASE_PATH}/donations1.jpg`,
-    // fix position of image
-    // `${process.env.NEXT_PUBLIC_BASE_PATH}/donations2.jpg`,
     `${process.env.NEXT_PUBLIC_BASE_PATH}/donations3.jpg`,
     `${process.env.NEXT_PUBLIC_BASE_PATH}/donations4.jpg`,
   ];
@@ -27,24 +25,24 @@ export function HeroImageBackground() {
       }}
       mt="60px"
     >
-      <Overlay color="#ffc200" opacity={0.4} zIndex={1} />
+      <Overlay color="#ffc200" opacity={0.2} zIndex={1} />
 
       <Box className={classes.inner}>
         <Title className={classes.title} ta={"center"}>
-          Hope through social fundraising
+          Bring Audacious Hope To The World
         </Title>
         <Text className={classes.description} ta={"center"}>
-          Tired of not knowing if your giving is making a difference.
+          Through Social Funding{" "}
         </Text>
 
-        <Box className={classes.controls}>
+        <Box className={classes.controls} ta={"center"}>
           <Link href={"/waitlist"}>
             <Button
               radius="xl"
               size="md"
               className={`hopegives-button ${classes.fundraiserButton}`}
             >
-              Create a Fundraiser
+              Start a Hope Campaign
             </Button>
           </Link>
         </Box>
