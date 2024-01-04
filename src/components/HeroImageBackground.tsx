@@ -1,3 +1,5 @@
+"use client";
+import React, { useEffect, useState } from "react";
 import { Title, Text, Button, Overlay, Box } from "@mantine/core";
 import Link from "next/link";
 import classes from "./HeroImageBackground.module.css";
@@ -11,17 +13,27 @@ export function HeroImageBackground() {
     `${process.env.NEXT_PUBLIC_BASE_PATH}/donations4.jpg`,
   ];
 
+  const [backgroundImageUrl, setBackgroundImageUrl] = useState("");
+
   // Function to select a random image URL from the list
-  const getRandomImageUrl = () => {
-    const randomIndex = Math.floor(Math.random() * images.length);
-    return images[randomIndex];
-  };
+  useEffect(() => {
+    const lastImage = localStorage.getItem("lastImage");
+    let newImage;
+
+    do {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      newImage = images[randomIndex];
+    } while (newImage === lastImage);
+
+    setBackgroundImageUrl(newImage);
+    localStorage.setItem("lastImage", newImage);
+  }, []); // Empty dependency array to run only once on mount
 
   return (
     <Box
       className={classes.wrapper}
       style={{
-        "--background-image-url": `url("${getRandomImageUrl()}")`,
+        "--background-image-url": `url("${backgroundImageUrl}")`,
       }}
       mt="60px"
     >
