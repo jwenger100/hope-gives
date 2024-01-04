@@ -1,3 +1,24 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation for description and title */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .wrapper {
   height: 100vh;
   position: relative;
@@ -6,6 +27,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-image: var(--background-image-url);
+  animation: fadeIn 1s ease-in;
 
   @media (max-width: $mantine-breakpoint-xs) {
     padding-top: rem(80px);
@@ -31,6 +53,7 @@
   margin-bottom: var(--mantine-spacing-xs);
   margin-top: var(--mantine-spacing-xl);
   text-align: center;
+  animation: slideUp 2s ease-in;
 
   @media (max-width: $mantine-breakpoint-xs) {
     font-size: rem(28px);
@@ -45,6 +68,7 @@
 .description {
   color: var(--mantine-color-gray-0);
   text-align: center;
+  animation: slideUp 2s ease-in;
 
   @media (max-width: $mantine-breakpoint-xs) {
     font-size: var(--mantine-font-size-md);
@@ -58,6 +82,7 @@
   justify-content: center;
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
+  animation: slideUp 2s ease-in;
 
   @media (max-width: $mantine-breakpoint-xs) {
     flex-direction: column;
