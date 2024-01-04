@@ -9,7 +9,6 @@ import {
   Select,
   Button,
   Image,
-  Overlay,
 } from "@mantine/core";
 import classes from "./waitlist.module.css";
 import { useForm } from "@mantine/form";
@@ -68,22 +67,26 @@ const Waitlist = () => {
               Sign up for early access to the HopeGives App
             </Title>
 
-            <form onSubmit={form.onSubmit((values) => console.log(values))}>
+            <form action="https://usebasin.com/f/2e82cbcbb72f" method="POST">
               <TextInput
                 placeholder="First name"
                 label="First name"
+                name="firstName"
                 required
                 style={{ marginBottom: "1em" }}
               />
               <TextInput
                 placeholder="Last Name"
                 label="Last name"
+                name="lastName"
                 required
                 style={{ marginBottom: "1em" }}
               />
               <TextInput
                 withAsterisk
                 label="Email"
+                type="email"
+                name="email"
                 placeholder="your@email.com"
                 {...form.getInputProps("email")}
                 style={{ marginBottom: "1em" }}
@@ -91,11 +94,13 @@ const Waitlist = () => {
               <TextInput
                 placeholder="Phone Number"
                 label="Phone Number"
+                name="phoneNumber"
                 required
                 style={{ marginBottom: "1em" }}
               />
               <Select
                 label="Are you a"
+                name="userType"
                 placeholder="Select"
                 data={["Donor", "Fundraiser"]} // Replace with actual options
                 required
