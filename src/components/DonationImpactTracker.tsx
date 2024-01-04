@@ -80,7 +80,7 @@ const DonationImpactTracker = () => {
             size="md"
             className={`hopegives-button ${classes.centerBtn}`}
           >
-            Create a Fundraiser
+            Start a Hope Campaign
           </Button>
         </Link>
       </Box>

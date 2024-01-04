@@ -90,6 +90,15 @@
   }
 }
 
+.centerBtn {
+  margin: 0 auto;
+  display: block;
+  margin-top: 3rem;
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    margin-top: 0.5rem;
+  }
+}
+
 .content {
   position: relative;
   z-index: 2;

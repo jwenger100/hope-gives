@@ -1,5 +1,13 @@
 "use client";
-import { Text, SimpleGrid, Container, rem, Box, Title } from "@mantine/core";
+import {
+  Text,
+  SimpleGrid,
+  Container,
+  rem,
+  Box,
+  Title,
+  Button,
+} from "@mantine/core";
 import {
   IconCoin,
   IconBuildingChurch,
@@ -7,6 +15,7 @@ import {
   IconUsersGroup,
 } from "@tabler/icons-react";
 import classes from "./ForChurchesBanner.module.css";
+import Link from "next/link";
 
 interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   icon: React.FC<any>;
@@ -73,6 +82,16 @@ export function ForChurchesBanner() {
             {items}
           </SimpleGrid>
         </Container>
+        <Link href={"/waitlist"} className={`link-styling`}>
+          <Button
+            ta="center"
+            radius="xl"
+            size="md"
+            className={`hopegives-button ${classes.centerBtn}`}
+          >
+            Start a Hope Campaign
+          </Button>
+        </Link>
       </Box>
     </>
   );

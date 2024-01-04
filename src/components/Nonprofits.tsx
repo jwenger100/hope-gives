@@ -48,7 +48,7 @@ const Nonprofits = () => {
               mt="lg"
               className={`hopegives-button ${classes.nonProfitsButton}`}
             >
-              Create a Fundraiser
+              Start a Hope Campaign
             </Button>
           </Link>
         </Container>

@@ -49,7 +49,7 @@ const HowItWorksComponent = () => {
           </Grid.Col>
           <Grid.Col span={{ base: 12, md: 3 }}>
             <Title order={4} ta="center">
-              Create a Fundraiser
+              Start a Hope Campaign
             </Title>
             <Text ta="center">Set your goal</Text>
             <Text ta="center">Tell your story</Text>
@@ -110,7 +110,7 @@ const HowItWorksComponent = () => {
               marginTop: "1rem",
             }}
           >
-            Create a Fundraiser
+            Start a Hope Campaign
           </Button>
         </Link>
       </Card>
@@ -207,7 +207,7 @@ const HowItWorksComponent = () => {
               marginTop: "1rem",
             }}
           >
-            Donate Now{" "}
+            Give to a Hope Campaign{" "}
           </Button>
         </Link>
       </Paper>
