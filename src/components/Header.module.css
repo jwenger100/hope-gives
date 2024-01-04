@@ -9,6 +9,54 @@
   }
 }
 
+@keyframes cascadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.drawerContent a {
+  visibility: hidden; /* Hide the element but still take up space */
+  opacity: 0;
+}
+
+@keyframes cascadeFadeIn {
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.drawerContent a {
+  animation: cascadeFadeIn 0.5s ease forwards;
+}
+
+/* Apply staggered animation delays */
+.drawerContent a:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.drawerContent a:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.drawerContent a:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.drawerContent a:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.drawerContent a:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.drawerContent a:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Continue as needed for the number of items you have */
 .headerBlurIn {
   animation: blurIn 1.5s ease-in-out;
 }
