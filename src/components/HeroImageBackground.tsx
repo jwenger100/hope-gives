@@ -37,12 +37,6 @@ export function HeroImageBackground() {
           Tired of not knowing if your giving is making a difference.
         </Text>
 
-        {/* <Container size={640}>
-          <Text size="lg" className={classes.description}>
-            Tired of not knowing if your giving is making a difference.
-          </Text>
-        </Container> */}
-
         <Box className={classes.controls}>
           <Link href={"/waitlist"}>
             <Button

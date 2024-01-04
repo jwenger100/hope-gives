@@ -1,0 +1,18 @@
+.wrapper {
+  height: 100vh;
+  position: relative;
+  padding-top: rem(180px);
+  padding-bottom: rem(130px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: var(--background-image-url);
+  width: calc(100% + 35px);
+  margin-left: -16px;
+  margin-right: -16px;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    padding-top: rem(80px);
+    padding-bottom: rem(50px);
+  }
+}
