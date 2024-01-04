@@ -5,22 +5,21 @@ import classes from "./about.module.css";
 
 const About = () => {
   return (
-    <Container fluid mt="60px" h={"800px"}>
-      <Title order={2} pt="md" ta="center" c={"var(--hopegives-gray)"}>
+    <Container fluid mt="60px" style={{ minHeight: "-webkit-fill-available" }}>
+      <Title order={2} pt="md" mb="xl" ta="center" c={"var(--hopegives-gray)"}>
         About{" "}
         <Text className={classes.hopeGivesText}>
           Hope<span>Gives</span>&nbsp;
         </Text>
       </Title>
-      <Card shadow="sm" padding="lg">
+      <Card padding="lg" className={classes.aboutContainer}>
         <Grid>
           <Grid.Col span={{ base: 12, md: 3 }}>
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH}/jones.jpg`}
-              height={"300"}
-              width={"300"}
               alt="Troy Jones"
               fit="contain"
+              radius="md"
             />
           </Grid.Col>
           <Grid.Col span={{ base: 12, md: 9 }}>

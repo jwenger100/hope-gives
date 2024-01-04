@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  height: 200px;
+  height: 100px;
 }
 .footerFlexItem {
   flex: 1; /* This makes each item grow equally, taking up 1/4th of the space */
