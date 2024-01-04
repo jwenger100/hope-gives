@@ -19,6 +19,11 @@
   --spacing-xl: 2rem;
 }
 
+.link-styling {
+  text-decoration: none;
+  color: var(--hopegives-gray);
+}
+
 .hopegives-button {
   background: linear-gradient(
     to right,
@@ -43,7 +48,7 @@
   display: inline !important;
 }
 
-html{
+html {
   /* Accounts for height of header when navigating to a section */
   scroll-padding-top: 70px;
 }

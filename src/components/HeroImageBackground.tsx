@@ -1,4 +1,5 @@
 import { Title, Text, Container, Button, Overlay, Box } from "@mantine/core";
+import Link from "next/link";
 import classes from "./HeroImageBackground.module.css";
 
 export function HeroImageBackground() {
@@ -43,13 +44,15 @@ export function HeroImageBackground() {
         </Container> */}
 
         <Box className={classes.controls}>
-          <Button
-            radius="xl"
-            size="md"
-            className={`hopegives-button ${classes.fundraiserButton}`}
-          >
-            Create a Fundraiser
-          </Button>
+          <Link href={"/waitlist"}>
+            <Button
+              radius="xl"
+              size="md"
+              className={`hopegives-button ${classes.fundraiserButton}`}
+            >
+              Create a Fundraiser
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Box>

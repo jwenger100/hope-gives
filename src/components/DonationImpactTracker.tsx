@@ -3,6 +3,7 @@ import { Title, Text, Grid, Box, Button } from "@mantine/core";
 import React from "react";
 import { IconHeartHandshake } from "@tabler/icons-react";
 import classes from "./DonationImpactTracker.module.css";
+import Link from "next/link";
 
 const DonationImpactTracker = () => {
   return (
@@ -66,14 +67,16 @@ const DonationImpactTracker = () => {
             </Text>
           </Grid.Col>
         </Grid>
-        <Button
-          ta="center"
-          radius="xl"
-          size="md"
-          className={`hopegives-button ${classes.centerBtn}`}
-        >
-          Create a Fundraiser
-        </Button>
+        <Link href={"/waitlist"} className={`link-styling`}>
+          <Button
+            ta="center"
+            radius="xl"
+            size="md"
+            className={`hopegives-button ${classes.centerBtn}`}
+          >
+            Create a Fundraiser
+          </Button>
+        </Link>
       </Box>
     </>
   );

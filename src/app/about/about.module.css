@@ -1,0 +1,12 @@
+.hopeGivesText {
+  font-size: calc(1.625rem * var(--mantine-scale));
+  line-height: 1.2;
+  color: var(--hopegives-gray);
+  display: inline;
+  span {
+    font-weight: bold;
+  }
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: calc(1.75rem * var(--mantine-scale));
+  }
+}

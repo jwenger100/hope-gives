@@ -1,13 +1,5 @@
 "use client";
-import {
-  Container,
-  ActionIcon,
-  rem,
-  Image,
-  Box,
-  Title,
-  Text,
-} from "@mantine/core";
+import { Container, ActionIcon, rem, Image, Box } from "@mantine/core";
 import {
   IconBrandFacebook,
   IconBrandLinkedin,
@@ -16,7 +8,6 @@ import {
   IconBrandInstagram,
 } from "@tabler/icons-react";
 import classes from "./FooterSocial.module.css";
-import Link from "next/link";
 
 export function FooterSocial() {
   return (

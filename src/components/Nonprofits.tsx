@@ -11,6 +11,7 @@ import {
   Box,
 } from "@mantine/core";
 import classes from "./Nonprofits.module.css";
+import Link from "next/link";
 
 const Nonprofits = () => {
   return (
@@ -40,14 +41,16 @@ const Nonprofits = () => {
               campaign made a donation.
             </List.Item>
           </List>
-          <Button
-            radius="xl"
-            size="md"
-            mt="lg"
-            className={`hopegives-button ${classes.nonProfitsButton}`}
-          >
-            Create a Fundraiser
-          </Button>
+          <Link href={"/waitlist"} className={`link-styling`}>
+            <Button
+              radius="xl"
+              size="md"
+              mt="lg"
+              className={`hopegives-button ${classes.nonProfitsButton}`}
+            >
+              Create a Fundraiser
+            </Button>
+          </Link>
         </Container>
       </Paper>
     </Box>

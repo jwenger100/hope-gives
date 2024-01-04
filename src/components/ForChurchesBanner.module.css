@@ -66,11 +66,32 @@
   }
 }
 
-.contentWrapper {
-  width: calc(100% + 35px);
-  margin-left: -16px;
-  margin-right: -16px;
-  background-color: var(--hopegives-gray);
-  height: 500px;
-  position: relative; /* Existing styles maintained */
+.feature {
+  position: relative;
+  padding-top: var(--mantine-spacing-xl);
+  padding-left: var(--mantine-spacing-xl);
+}
+
+.overlay {
+  position: absolute;
+  height: rem(100px);
+  width: rem(160px);
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.icon {
+  color: var(--hopegives-yellow);
+}
+
+.title {
+  color: light-dark(var(--mantine-color-white), var(--mantine-color-white));
 }

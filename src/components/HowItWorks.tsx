@@ -13,6 +13,7 @@ import {
   Box,
   Image,
 } from "@mantine/core";
+import Link from "next/link";
 
 const HowItWorksComponent = () => {
   return (
@@ -95,21 +96,23 @@ const HowItWorksComponent = () => {
             <Text ta="center">Thank donors</Text>
           </Grid.Col>
         </Grid>
-        <Button
-          ta="center"
-          radius="xl"
-          size="md"
-          className={`hopegives-button`}
-          style={{
-            display: "block",
-            width: "300px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginTop: "1rem",
-          }}
-        >
-          Create a Fundraiser
-        </Button>
+        <Link href={"/waitlist"} className={`link-styling`}>
+          <Button
+            ta="center"
+            radius="xl"
+            size="md"
+            className={`hopegives-button`}
+            style={{
+              display: "block",
+              width: "300px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              marginTop: "1rem",
+            }}
+          >
+            Create a Fundraiser
+          </Button>
+        </Link>
       </Card>
 
       {/* For Donors section */}
@@ -190,21 +193,23 @@ const HowItWorksComponent = () => {
             <Text ta="center">Receive credit card rewards</Text>
           </Grid.Col>
         </Grid>
-        <Button
-          ta="center"
-          radius="xl"
-          size="md"
-          bg={"var(--hopegives-gray)"}
-          style={{
-            display: "block",
-            width: "300px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginTop: "1rem",
-          }}
-        >
-          Donate Now{" "}
-        </Button>
+        <Link href={"/waitlist"} className={`link-styling`}>
+          <Button
+            ta="center"
+            radius="xl"
+            size="md"
+            bg={"var(--hopegives-gray)"}
+            style={{
+              display: "block",
+              width: "300px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              marginTop: "1rem",
+            }}
+          >
+            Donate Now{" "}
+          </Button>
+        </Link>
       </Paper>
     </Container>
   );
