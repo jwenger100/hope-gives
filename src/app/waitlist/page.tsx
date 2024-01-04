@@ -40,7 +40,7 @@ const Contact = () => {
         <Container size="xs" p="md">
           <Paper p="xl" withBorder shadow="md">
             <Image
-              src="/HopeGives-full-color.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-full-color.png`}
               alt="waitlist image"
               fit="contain"
               height={100}

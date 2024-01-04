@@ -90,6 +90,8 @@ export function FeaturesTitle() {
       style={{
         "--background-image-url": `url(${process.env.NEXT_PUBLIC_BASE_PATH}/happy-people.jpg)`,
       }}
+      pl={{ sm: "none", md: "200px" }}
+      pr={{ sm: "none", md: "200px" }}
     >
       <Title
         className={classes.title}
