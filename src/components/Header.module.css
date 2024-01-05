@@ -54,13 +54,14 @@
   background-color: white;
   border-bottom: rem(1px) solid
     light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-  /* background: linear-gradient(to left, #ffffff, #fff2cc); */
 }
 
 .headerLogo {
   object-fit: contain;
   /* fix for mobile devices */
-  float: left;
+  @media screen and (max-width: 768px) {
+    width: auto;
+  }
 }
 
 .inner {

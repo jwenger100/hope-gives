@@ -1,11 +1,29 @@
 "use client";
 import { useState } from "react";
-import { Container, Group, Burger, Box, Image, Drawer } from "@mantine/core";
+import {
+  Container,
+  Group,
+  Burger,
+  Box,
+  Image,
+  Drawer,
+  ActionIcon,
+  rem,
+  Divider,
+} from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Header.module.css";
 import { useMediaQuery } from "@mantine/hooks";
 import { useHeadroom } from "@mantine/hooks";
 import Link from "next/link";
+
+import {
+  IconBrandFacebook,
+  IconBrandLinkedin,
+  IconBrandTiktok,
+  IconBrandTwitter,
+  IconBrandInstagram,
+} from "@tabler/icons-react";
 
 export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
@@ -79,6 +97,98 @@ export function Header() {
           <Group gap={0} className={classes.drawerContent}>
             {mainItems}
           </Group>
+          {opened && (
+            <>
+              {/* <Divider /> */}
+              <Box ta="center" mt={"md"} pb={"sm"}>
+                {/* Twitter/X */}
+                <ActionIcon
+                  size="lg"
+                  color="var(--hopegives-orange)"
+                  variant="subtle"
+                  // change this to the actual link
+                  component="a"
+                  href="https://twitter.com/hopegives"
+                  aria-label="Open in a new tab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconBrandTwitter
+                    style={{ width: rem(24), height: rem(24) }}
+                    stroke={1.5}
+                  ></IconBrandTwitter>
+                </ActionIcon>
+                {/* Facebook */}
+                <ActionIcon
+                  size="lg"
+                  color="var(--hopegives-orange)"
+                  variant="subtle"
+                  // change this to the actual link
+                  component="a"
+                  href="https://www.facebook.com/profile.php?id=61554668333804"
+                  aria-label="Open in a new tab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconBrandFacebook
+                    style={{ width: rem(24), height: rem(24) }}
+                    stroke={1.5}
+                  ></IconBrandFacebook>
+                </ActionIcon>
+                {/* Instagram */}
+                <ActionIcon
+                  size="lg"
+                  color="var(--hopegives-orange)"
+                  variant="subtle"
+                  // change this to the actual link
+                  component="a"
+                  href="https://www.instagram.com/hopegives_/?utm_source=qr"
+                  aria-label="Open in a new tab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconBrandInstagram
+                    style={{ width: rem(24), height: rem(24) }}
+                    stroke={1.5}
+                  ></IconBrandInstagram>
+                </ActionIcon>
+                {/* LinkedIn */}
+                <ActionIcon
+                  size="lg"
+                  color="var(--hopegives-orange)"
+                  variant="subtle"
+                  // change this to the actual link
+                  component="a"
+                  href="https://www.linkedin.com/company/hopegivesinc/"
+                  aria-label="Open in a new tab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconBrandLinkedin
+                    style={{ width: rem(24), height: rem(24) }}
+                    stroke={1.5}
+                  ></IconBrandLinkedin>
+                </ActionIcon>
+                {/* Tiktok */}
+                <ActionIcon
+                  size="lg"
+                  color="var(--hopegives-orange)"
+                  variant="subtle"
+                  // change this to the actual link
+                  component="a"
+                  href="https://www.tiktok.com/@hopegives"
+                  aria-label="Open in a new tab"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <IconBrandTiktok
+                    style={{ width: rem(24), height: rem(24) }}
+                    stroke={1.5}
+                  ></IconBrandTiktok>
+                </ActionIcon>
+              </Box>
+            </>
+          )}
         </Box>
       </Drawer>
     </>
