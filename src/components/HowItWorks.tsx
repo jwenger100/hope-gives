@@ -190,7 +190,7 @@ const HowItWorksComponent = () => {
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 3 }}>
               <Title order={4} ta="center">
-                Get Rewards
+                Get tax deduction/points
               </Title>
               <Text ta="center">Counts as a charitable tax donation</Text>
               <Text ta="center">Receive credit card rewards</Text>

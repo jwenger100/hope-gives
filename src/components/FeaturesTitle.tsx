@@ -30,13 +30,13 @@ const features = [
     icon: IconEmpathize,
     title: "Do Good",
     description:
-      "The Good Samaritan didn't walk past, he stopped, cared, and acted. Similarly, we are here to actively demonstrate kindness and compassion to those in need.",
+      "Jesus taught clearly we all need to be Good Samaritans (Luke 10). The Good Samaritan didn't walk past, he stopped, cared, and acted. Similarly, we are here to actively demonstrate kindness and compassion to those in need.",
   },
   {
     icon: IconCrown,
     title: "True Religion",
     description:
-      "True religion is not just about rituals but about taking care of the hurting, the broken, and the marginalized. It’s about having a heart that responds to pain and suffering.",
+      "True followers of Jesus take care of the hurting, the broken, and the marginalized. They have a heart that responds to pain and suffering (James 1:27).",
   },
   {
     icon: IconGift,

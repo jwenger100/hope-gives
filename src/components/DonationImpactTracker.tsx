@@ -12,9 +12,6 @@ const DonationImpactTracker = () => {
       <Box className={classes.wrapper} id="whyTrustUs">
         <Fade>
           <Title ta="center">Why trust us?</Title>
-          <Text ta="center">
-            Have confidence with technology built on accountability
-          </Text>
         </Fade>
         <Box className={classes.simpleGridContainer}>
           <Grid mt="xl">
