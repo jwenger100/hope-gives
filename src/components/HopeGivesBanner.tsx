@@ -9,8 +9,7 @@ const HopeGivesBanner = () => {
   return (
     <Slide direction="left">
       {" "}
-      {/* Change the direction as needed */}
-      <Box mt="xl" className={classes.bannerBackground}>
+      <Box className={classes.bannerBackground}>
         <Image
           src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-Icon3.png`}
           alt="footer-logo"

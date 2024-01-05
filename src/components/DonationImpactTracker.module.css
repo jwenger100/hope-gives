@@ -1,5 +1,11 @@
 .wrapper {
   color: var(--hopegives-gray);
+  background-color: rgba(211, 211, 211, 0.2);
+  width: calc(100% + 35px);
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .item {
