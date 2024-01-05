@@ -12,6 +12,7 @@ const About = () => {
         pt="md"
         mb="xl"
         ta="center"
+        mt={"80px"}
         c={"var(--hopegives-gray)"}
       >
         About{" "}

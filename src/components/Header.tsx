@@ -44,17 +44,15 @@ export function Header() {
     <Link
       href={item.link}
       key={item.label}
-      legacyBehavior
       className={classes.mainLink}
       data-active={index === active && active !== -1 ? true : undefined}
       onClick={() => {
         if (item.link) {
           setActive(index);
-          toggle(); // Close the drawer when a link is clicked
         }
       }}
     >
-      <a onClick={() => setActive(index)}>{item.label}</a>
+      {item.label}
     </Link>
   ));
 
