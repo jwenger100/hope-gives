@@ -49,6 +49,7 @@ export function Header() {
       onClick={() => {
         if (item.link) {
           setActive(index);
+          toggle(); // Close the drawer when a link is clicked
         }
       }}
     >
