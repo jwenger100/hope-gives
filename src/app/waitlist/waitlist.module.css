@@ -1,3 +1,14 @@
+@keyframes zoomIn {
+  from {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .wrapper {
   height: 900px;
   position: relative;
@@ -6,17 +17,24 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: var(--background-image-url);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 194, 0, 0.3),
+      rgba(255, 194, 0, 0.3) /* --hopegives-yellow */
+    ),
+    var(--background-image-url);
+
+  animation: zoomIn 2s ease-out;
   width: calc(100% + 35px);
   margin-left: -16px;
   margin-right: -16px;
 
   @media (max-width: $mantine-breakpoint-xs) {
-    padding-top: rem(80px);
     padding-bottom: rem(50px);
   }
 }
 
 .container {
   z-index: 3;
+  margin-top: -60px;
 }

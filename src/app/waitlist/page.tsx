@@ -39,7 +39,7 @@ const Waitlist = () => {
       >
         {/* <Overlay color="#ffc200" opacity={0.4} zIndex={1} /> */}
 
-        <Container size="xs" p="md">
+        <Container size="xs">
           <Paper p="xl" withBorder shadow="md" className={classes.container}>
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH}/HopeGives-full-color.png`}

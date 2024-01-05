@@ -1,3 +1,55 @@
+/* Define keyframes for image animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Define keyframes for text animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the animation to the title element */
+.titleAnimation {
+  animation: popIn 2s ease-out;
+}
+
+/* Apply the animations to your elements */
+.imageAnimation {
+  animation: fadeIn 2s ease-out;
+}
+
+.textAnimation {
+  animation: slideUp 2s ease-out;
+}
+
 .hopeGivesText {
   font-size: calc(1.625rem * var(--mantine-scale));
   line-height: 1.2;

@@ -37,7 +37,7 @@ export function HeroImageBackground() {
       }}
       mt="60px"
     >
-      <Overlay color="#ffc200" opacity={0.2} zIndex={1} />
+      <Overlay color="#ffc200" opacity={0.3} zIndex={1} />
 
       <Box className={classes.inner}>
         <Title className={classes.title} ta={"center"}>

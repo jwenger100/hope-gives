@@ -6,7 +6,14 @@ import classes from "./about.module.css";
 const About = () => {
   return (
     <Container fluid mt="60px" style={{ minHeight: "-webkit-fill-available" }}>
-      <Title order={2} pt="md" mb="xl" ta="center" c={"var(--hopegives-gray)"}>
+      <Title
+        className={classes.titleAnimation}
+        order={2}
+        pt="md"
+        mb="xl"
+        ta="center"
+        c={"var(--hopegives-gray)"}
+      >
         About{" "}
         <Text className={classes.hopeGivesText}>
           Hope<span>Gives</span>&nbsp;
@@ -20,10 +27,11 @@ const About = () => {
               alt="Troy Jones"
               fit="contain"
               radius="md"
+              className={classes.imageAnimation}
             />
           </Grid.Col>
           <Grid.Col span={{ base: 12, md: 9 }}>
-            <Box>
+            <Box className={classes.textAnimation}>
               <Text fw={500} size="lg" style={{ marginBottom: 10 }}>
                 The story of Troy Jones and the founding of HopeGives is a
                 powerful tale of transformation and commitment to helping
