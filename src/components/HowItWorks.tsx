@@ -119,7 +119,7 @@ const HowItWorksComponent = () => {
       </Fade>
 
       {/* For Donors section with slide effect */}
-      <Slide direction="up">
+      <Slide direction="right">
         <Paper
           withBorder
           shadow="sm"

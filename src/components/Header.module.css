@@ -59,6 +59,8 @@
 
 .headerLogo {
   object-fit: contain;
+  /* fix for mobile devices */
+  float: left;
 }
 
 .inner {
