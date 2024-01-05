@@ -1,8 +1,10 @@
-@keyframes fadeIn {
+@keyframes zoomIn {
   from {
+    transform: scale(1.1);
     opacity: 0;
   }
   to {
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -27,7 +29,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-image: var(--background-image-url);
-  animation: fadeIn 1s ease-in;
+  animation: zoomIn 2s ease-out;
 
   @media (max-width: $mantine-breakpoint-xs) {
     padding-top: rem(80px);

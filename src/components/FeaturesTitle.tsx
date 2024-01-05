@@ -17,6 +17,7 @@ import {
   IconGrowth,
 } from "@tabler/icons-react";
 import classes from "./FeaturesTitle.module.css";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const features = [
   {
@@ -58,30 +59,32 @@ const features = [
 ];
 
 export function FeaturesTitle() {
-  const items = features.map((feature) => (
-    <Box key={feature.title} className={classes.item}>
-      <ThemeIcon
-        size={44}
-        radius="md"
-        variant="gradient"
-        gradient={{
-          deg: 133,
-          from: "var(--hopegives-orange)",
-          to: "var(--hopegives-yellow)",
-        }}
-      >
-        <feature.icon
-          style={{ width: rem(26), height: rem(26) }}
-          stroke={1.5}
-        />
-      </ThemeIcon>
-      <Text fz="lg" mt="sm" fw={500}>
-        {feature.title}
-      </Text>
-      <Text fz="sm" className={classes.itemDescription}>
-        {feature.description}
-      </Text>
-    </Box>
+  const items = features.map((feature, index) => (
+    <Slide key={feature.title} direction={index % 2 === 0 ? "left" : "right"}>
+      <Box key={feature.title} className={classes.item}>
+        <ThemeIcon
+          size={44}
+          radius="md"
+          variant="gradient"
+          gradient={{
+            deg: 133,
+            from: "var(--hopegives-orange)",
+            to: "var(--hopegives-yellow)",
+          }}
+        >
+          <feature.icon
+            style={{ width: rem(26), height: rem(26) }}
+            stroke={1.5}
+          />
+        </ThemeIcon>
+        <Text fz="lg" mt="sm" fw={500}>
+          {feature.title}
+        </Text>
+        <Text fz="sm" className={classes.itemDescription}>
+          {feature.description}
+        </Text>
+      </Box>
+    </Slide>
   ));
 
   return (
@@ -93,14 +96,16 @@ export function FeaturesTitle() {
       pl={{ sm: "none", md: "200px" }}
       pr={{ sm: "none", md: "200px" }}
     >
-      <Title
-        className={classes.title}
-        order={2}
-        style={{ textAlign: "center" }}
-        id="ourValues"
-      >
-        Our Values{" "}
-      </Title>
+      <Fade>
+        <Title
+          className={classes.title}
+          order={2}
+          style={{ textAlign: "center" }}
+          id="ourValues"
+        >
+          Our Values{" "}
+        </Title>
+      </Fade>
       <SimpleGrid cols={{ base: 1, md: 2 }} spacing={"xl"}>
         {items}
       </SimpleGrid>

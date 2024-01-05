@@ -7,6 +7,15 @@
   margin-bottom: 40px;
 }
 
+.donorBtn {
+  display: block;
+  width: 300px;
+  background-color: var(--hopegives-gray);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+}
+
 .howItWorksTitle {
   color: var(--hopegives-gray);
 }
