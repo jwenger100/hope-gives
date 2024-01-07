@@ -1,15 +1,6 @@
 "use client";
 import React from "react";
-import {
-  Center,
-  Container,
-  Paper,
-  Text,
-  Title,
-  List,
-  Button,
-  Box,
-} from "@mantine/core";
+import { Container, Paper, Title, List, Button, Box } from "@mantine/core";
 import classes from "./Nonprofits.module.css";
 import Link from "next/link";
 import { Fade, Slide } from "react-awesome-reveal";
