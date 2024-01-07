@@ -16,16 +16,18 @@ import {
 } from "@tabler/icons-react";
 import classes from "./ForChurchesBanner.module.css";
 import Link from "next/link";
-import { Fade, Zoom } from "react-awesome-reveal";
+import { Fade, Zoom, Slide } from "react-awesome-reveal";
 
 interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   icon: React.FC<any>;
   title: string;
+  index: number;
 }
 
-function Feature({ icon: Icon, title }: FeatureProps) {
+function Feature({ icon: Icon, title, index }: FeatureProps) {
+  const delay = index * 50; // 100ms delay between each feature
   return (
-    <Zoom>
+    <Slide cascade delay={delay}>
       <Box className={classes.feature}>
         <Icon className={classes.featureIcon} stroke={1.5} />
         <Text
@@ -38,7 +40,7 @@ function Feature({ icon: Icon, title }: FeatureProps) {
           {title}
         </Text>
       </Box>
-    </Zoom>
+    </Slide>
   );
 }
 
@@ -62,7 +64,9 @@ const mockdata = [
 ];
 
 export function ForChurchesBanner() {
-  const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
+  const items = mockdata.map((item, index) => (
+    <Feature {...item} key={item.title} index={index} />
+  ));
 
   return (
     <>
