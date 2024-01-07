@@ -37,8 +37,6 @@ const Waitlist = () => {
         }}
         mt="60px"
       >
-        {/* <Overlay color="#ffc200" opacity={0.4} zIndex={1} /> */}
-
         <Container size="xs">
           <Paper p="xl" withBorder shadow="md" className={classes.container}>
             <Image

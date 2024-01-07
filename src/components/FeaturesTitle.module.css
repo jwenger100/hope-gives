@@ -5,8 +5,8 @@
   background-repeat: no-repeat;
   background-image: linear-gradient(
       to bottom,
-      rgba(255, 194, 0, 0.4),
-      rgba(255, 194, 0, 0.4) /* --hopegives-yellow */
+      rgba(89, 79, 62, 0.3),
+      rgba(89, 79, 62, 0.3) /* --hopegives-gray*/
     ),
     var(--background-image-url);
   height: auto;

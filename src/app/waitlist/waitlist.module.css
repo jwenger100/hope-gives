@@ -18,9 +18,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-image: linear-gradient(
-      to bottom,
-      rgba(255, 194, 0, 0.3),
-      rgba(255, 194, 0, 0.3) /* --hopegives-yellow */
+      /* --hopegives-gray */ to bottom,
+      rgba(89, 79, 62, 0.3),
+      rgba(89, 79, 62, 0.3)
     ),
     var(--background-image-url);
 
