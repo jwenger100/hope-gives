@@ -63,7 +63,7 @@ export function ForChurchesBanner() {
   return (
     <>
       <Box className={classes.wrapper} mt="60px" id="churches">
-        <Fade cascade damping={0.9} triggerOnce>
+        <Fade cascade triggerOnce>
           <Box
             className={classes.backgroundImage}
             style={{
