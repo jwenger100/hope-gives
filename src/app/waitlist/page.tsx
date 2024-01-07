@@ -11,18 +11,8 @@ import {
   Image,
 } from "@mantine/core";
 import classes from "./waitlist.module.css";
-import { useForm } from "@mantine/form";
 
 const Waitlist = () => {
-  const form = useForm({
-    initialValues: {
-      email: "",
-    },
-
-    validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
-    },
-  });
   // scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -86,7 +76,6 @@ const Waitlist = () => {
                 type="email"
                 name="email"
                 placeholder="your@email.com"
-                {...form.getInputProps("email")}
                 style={{ marginBottom: "1em" }}
               />
               <TextInput
