@@ -14,7 +14,6 @@ import {
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Header.module.css";
 import { useMediaQuery } from "@mantine/hooks";
-import { useHeadroom } from "@mantine/hooks";
 import Link from "next/link";
 
 import {
@@ -29,7 +28,6 @@ export function Header() {
   const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(-1);
   const isMobile = useMediaQuery("(max-width: 750px)");
-  const pinned = useHeadroom({ fixedAt: 120 });
 
   const mainLinks = [
     { link: "/#whyTrustUs", label: "Why Trust Us" },
@@ -100,7 +98,12 @@ export function Header() {
           {opened && (
             <>
               {/* <Divider /> */}
-              <Box ta="center" mt={"md"} pb={"sm"}>
+              <Box
+                ta="center"
+                mt={"md"}
+                pb={"sm"}
+                className={classes.fadeInSocialIcons}
+              >
                 {/* Twitter/X */}
                 <ActionIcon
                   size="lg"
