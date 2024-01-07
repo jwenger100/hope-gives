@@ -6,7 +6,7 @@ import {
   ThemeIcon,
   rem,
   Box,
-  Overlay,
+  Container,
 } from "@mantine/core";
 import {
   IconPlant,
@@ -93,8 +93,6 @@ export function FeaturesTitle() {
       style={{
         "--background-image-url": `url(${process.env.NEXT_PUBLIC_BASE_PATH}/happy-people.jpg)`,
       }}
-      pl={{ sm: "none", md: "200px" }}
-      pr={{ sm: "none", md: "200px" }}
     >
       <Fade>
         <Title
@@ -106,9 +104,11 @@ export function FeaturesTitle() {
           Our Values{" "}
         </Title>
       </Fade>
-      <SimpleGrid cols={{ base: 1, md: 2 }} spacing={"xl"}>
-        {items}
-      </SimpleGrid>
+      <Container>
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing={"xl"}>
+          {items}
+        </SimpleGrid>
+      </Container>
     </Box>
   );
 }
