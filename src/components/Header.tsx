@@ -9,7 +9,6 @@ import {
   Drawer,
   ActionIcon,
   rem,
-  Divider,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import classes from "./Header.module.css";
