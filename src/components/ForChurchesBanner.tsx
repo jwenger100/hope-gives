@@ -1,13 +1,5 @@
 "use client";
-import {
-  Text,
-  SimpleGrid,
-  Container,
-  rem,
-  Box,
-  Title,
-  Button,
-} from "@mantine/core";
+import { Text, SimpleGrid, Container, Box, Title, Button } from "@mantine/core";
 import {
   IconCoin,
   IconBuildingChurch,
