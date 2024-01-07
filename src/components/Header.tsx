@@ -41,6 +41,7 @@ export function Header() {
     <Link
       href={item.link}
       key={item.label}
+      legacyBehavior
       className={classes.mainLink}
       data-active={index === active && active !== -1 ? true : undefined}
       onClick={() => {
@@ -49,7 +50,9 @@ export function Header() {
         }
       }}
     >
-      {item.label}
+      <a onClick={() => item.link} href={item.link}>
+        {item.label}
+      </a>
     </Link>
   ));
 
