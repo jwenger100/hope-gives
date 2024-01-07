@@ -196,14 +196,14 @@ const HowItWorksComponent = () => {
               <Text ta="center">Receive credit card rewards</Text>
             </Grid.Col>
           </Grid>
-          <Link href={"/waitlist"} className={`link-styling}`}>
+          <Link href={"/waitlist"} className={`link-styling`}>
             <Button
               ta="center"
               radius="xl"
               size="md"
               className={classes.donorBtn}
             >
-              Give to a Hope Campaign{" "}
+              Give to a Hope Campaign
             </Button>
           </Link>
         </Paper>
