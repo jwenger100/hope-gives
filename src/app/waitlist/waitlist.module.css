@@ -12,7 +12,7 @@
 .wrapper {
   height: 900px;
   position: relative;
-  padding-top: rem(180px);
+  padding-top: rem(120px);
   padding-bottom: rem(130px);
   background-size: cover;
   background-position: center;
@@ -28,9 +28,10 @@
   width: calc(100% + 35px);
   margin-left: -16px;
   margin-right: -16px;
-
-  @media (max-width: $mantine-breakpoint-xs) {
-    padding-bottom: rem(50px);
+  @media screen and (max-width: $mantine-breakpoint-xs) {
+    height: 100%;
+    padding-top: rem(20px);
+    padding-bottom: rem(60px);
   }
 }
 
