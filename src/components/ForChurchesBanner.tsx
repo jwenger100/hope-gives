@@ -23,22 +23,21 @@ interface FeatureProps extends React.ComponentPropsWithoutRef<"div"> {
   title: string;
 }
 
-function Feature({ icon: Icon, title, className, ...others }: FeatureProps) {
+function Feature({ icon: Icon, title }: FeatureProps) {
   return (
     <Zoom>
-      <div className={classes.feature} {...others}>
-        <div className={classes.overlay} />
-        <div className={classes.content}>
-          <Icon
-            style={{ width: rem(38), height: rem(38) }}
-            className={classes.icon}
-            stroke={1.5}
-          />
-          <Text fw={700} fz="lg" mb="xs" mt={5} className={classes.title}>
-            {title}
-          </Text>
-        </div>
-      </div>
+      <Box className={classes.feature}>
+        <Icon className={classes.featureIcon} stroke={1.5} />
+        <Text
+          fw={700}
+          fz={{ base: "sm", md: "lg" }}
+          mb="xs"
+          mt={5}
+          className={classes.featureDescription}
+        >
+          {title}
+        </Text>
+      </Box>
     </Zoom>
   );
 }
@@ -67,7 +66,7 @@ export function ForChurchesBanner() {
 
   return (
     <>
-      <Box className={classes.backgroundImageWrapper} mt="60px" id="churches">
+      <Box className={classes.wrapper} mt="60px" id="churches">
         <Fade cascade damping={0.9} triggerOnce>
           <Box
             className={classes.backgroundImage}
@@ -76,12 +75,10 @@ export function ForChurchesBanner() {
             }}
           ></Box>
           <Container size={"md"} className={classes.container}>
-            <Box className={classes.inner}>
-              <Title className={classes.title}>For Churches</Title>
-              <Text mb={"xl"} className={classes.text}>
-                A new way to give
-              </Text>
-            </Box>
+            <Title className={classes.title}>For Churches</Title>
+            <Text mb={"xl"} className={classes.text}>
+              A new way to give
+            </Text>
             <SimpleGrid cols={{ base: 1, md: 2 }} spacing={50}>
               {items}
             </SimpleGrid>
