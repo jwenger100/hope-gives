@@ -56,11 +56,26 @@
   margin-top: var(--mantine-spacing-xl);
   text-align: center;
   animation: slideUp 2s ease-in;
+  background-image: linear-gradient(
+    to right,
+    var(--hopegives-yellow) 50%,
+    white 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* for webkit browsers */
+  transition: background-position 1s ease;
 
   @media (max-width: $mantine-breakpoint-xs) {
     font-size: rem(28px);
     text-align: left;
   }
+}
+
+.title:hover {
+  background-position: left bottom;
 }
 
 .highlight {
