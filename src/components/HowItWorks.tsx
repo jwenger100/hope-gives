@@ -51,14 +51,14 @@ const HowItWorksComponent = () => {
               </Box>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 3 }}>
-              <Title order={4} ta="center">
+              <Title order={4} ta={{ base: "center", md: "left" }}>
                 Start a Hope Campaign
               </Title>
-              <Text ta="center">Set your goal</Text>
-              <Text ta="center">Tell your story</Text>
+              <Text ta={{ base: "center", md: "left" }}>Set your goal</Text>
+              <Text ta={{ base: "center", md: "left" }}>Tell your story</Text>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 1 }}>
-              <Box ta="center">
+              <Box ta={{ base: "center", md: "left" }}>
                 <Image
                   src={`${process.env.NEXT_PUBLIC_BASE_PATH}/megaphone.svg`}
                   width={48}
@@ -71,12 +71,16 @@ const HowItWorksComponent = () => {
               </Box>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 3 }}>
-              <Title order={4} ta="center">
+              <Title order={4} ta={{ base: "center", md: "left" }}>
                 Share with Others
               </Title>
-              <Text ta="center">Send text messages</Text>
-              <Text ta="center">Send emails</Text>
-              <Text ta="center">Share on Social Media</Text>
+              <Text ta={{ base: "center", md: "left" }}>
+                Send text messages
+              </Text>
+              <Text ta={{ base: "center", md: "left" }}>Send emails</Text>
+              <Text ta={{ base: "center", md: "left" }}>
+                Share on Social Media
+              </Text>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 1 }}>
               <Box ta="center">
@@ -92,11 +96,11 @@ const HowItWorksComponent = () => {
               </Box>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 3 }}>
-              <Title order={4} ta="center">
+              <Title order={4} ta={{ base: "center", md: "left" }}>
                 Manage Donations
               </Title>
-              <Text ta="center">Collect funds</Text>
-              <Text ta="center">Thank donors</Text>
+              <Text ta={{ base: "center", md: "left" }}>Collect funds</Text>
+              <Text ta={{ base: "center", md: "left" }}>Thank donors</Text>
             </Grid.Col>
           </Grid>
           <Link href={"/waitlist"} className={`link-styling`}>
@@ -150,11 +154,11 @@ const HowItWorksComponent = () => {
               </Box>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 3 }}>
-              <Title order={4} ta="center">
+              <Title order={4} ta={{ base: "center", md: "left" }}>
                 Find a Story{" "}
               </Title>
-              <Text ta="center">Browse stories</Text>
-              <Text ta="center">Donate to a cause</Text>
+              <Text ta={{ base: "center", md: "left" }}>Browse stories</Text>
+              <Text ta={{ base: "center", md: "left" }}>Donate to a cause</Text>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 1 }}>
               <Box ta="center">
@@ -170,11 +174,15 @@ const HowItWorksComponent = () => {
               </Box>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 3 }}>
-              <Title order={4} ta="center">
+              <Title order={4} ta={{ base: "center", md: "left" }}>
                 Feel the impact
               </Title>
-              <Text ta="center">Send prayers and messages</Text>
-              <Text ta="center">Follow each donation dollar</Text>
+              <Text ta={{ base: "center", md: "left" }}>
+                Send prayers and messages
+              </Text>
+              <Text ta={{ base: "center", md: "left" }}>
+                Follow each donation dollar
+              </Text>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 1 }}>
               <Box ta="center">
@@ -190,11 +198,15 @@ const HowItWorksComponent = () => {
               </Box>
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 3 }}>
-              <Title order={4} ta="center">
+              <Title order={4} ta={{ base: "center", md: "left" }}>
                 Get tax deduction/points
               </Title>
-              <Text ta="center">Counts as a charitable tax donation</Text>
-              <Text ta="center">Receive credit card rewards</Text>
+              <Text ta={{ base: "center", md: "left" }}>
+                Counts as a charitable tax donation
+              </Text>
+              <Text ta={{ base: "center", md: "left" }}>
+                Receive credit card rewards
+              </Text>
             </Grid.Col>
           </Grid>
           <Link href={"/waitlist"} className={`link-styling`}>

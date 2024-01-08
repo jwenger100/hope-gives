@@ -33,7 +33,7 @@ const About = () => {
           </Grid.Col>
           <Grid.Col span={{ base: 12, md: 9 }}>
             <Box className={classes.textAnimation}>
-              <Text fw={500} size="lg" style={{ marginBottom: 10 }}>
+              <Text size="sm" style={{ marginBottom: 10 }}>
                 The story of Troy Jones and the founding of HopeGives is a
                 powerful tale of transformation and commitment to helping
                 others. Troy's journey began in a challenging environment,

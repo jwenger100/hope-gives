@@ -4,9 +4,14 @@
 }
 .wrapper {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   height: 100px;
+
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+    height: auto;
+  }
 }
 .footerFlexItem {
   flex: 1; /* This makes each item grow equally, taking up 1/4th of the space */
@@ -17,7 +22,6 @@
 }
 .footerLogo {
   object-fit: contain;
-  margin: 0 auto;
   height: 100px;
   width: 100px;
 }

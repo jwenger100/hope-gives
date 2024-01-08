@@ -21,6 +21,9 @@ import { Fade, Slide } from "react-awesome-reveal";
 
 const features = [
   {
+    title: "Our values",
+  },
+  {
     icon: IconPlant,
     title: "Make a Difference",
     description:
@@ -50,39 +53,39 @@ const features = [
     description:
       "We strive to be a tangible expression of faith – the hands that extend in generosity and care. Just as hands are vital for action, our community collaboratively works, reaching out and helping in harmony.",
   },
-  {
-    icon: IconGrowth,
-    title: "Growth",
-    description:
-      "At the heart of our mission is the belief that every individual has the potential to grow and flourish. By nurturing talents, providing resources, and creating opportunities for personal and communal development, we empower individuals to reach their full potential.",
-  },
 ];
 
 export function FeaturesTitle() {
   const items = features.map((feature, index) => (
-    <Slide key={feature.title} direction={index % 2 === 0 ? "left" : "right"}>
-      <Box key={feature.title} className={classes.item}>
-        <ThemeIcon
-          size={44}
-          radius="md"
-          variant="gradient"
-          gradient={{
-            deg: 133,
-            from: "var(--hopegives-orange)",
-            to: "var(--hopegives-yellow)",
-          }}
-        >
-          <feature.icon
-            style={{ width: rem(26), height: rem(26) }}
-            stroke={1.5}
-          />
-        </ThemeIcon>
-        <Text fz="lg" mt="sm" fw={500}>
-          {feature.title}
-        </Text>
-        <Text fz="sm" className={classes.itemDescription}>
-          {feature.description}
-        </Text>
+    <Slide
+      key={feature.title || index}
+      direction={index % 2 === 0 ? "left" : "right"}
+    >
+      <Box className={classes.item}>
+        {feature.icon && (
+          <ThemeIcon
+            size={44}
+            radius="md"
+            variant="gradient"
+            gradient={{
+              deg: 133,
+              from: "var(--hopegives-orange)",
+              to: "var(--hopegives-yellow)",
+            }}
+          >
+            <feature.icon style={{ width: 26, height: 26 }} stroke={1.5} />
+          </ThemeIcon>
+        )}
+        {feature.title && (
+          <Text fz="lg" mt="sm" fw={500}>
+            {feature.title}
+          </Text>
+        )}
+        {feature.description && (
+          <Text fz="sm" className={classes.itemDescription}>
+            {feature.description}
+          </Text>
+        )}
       </Box>
     </Slide>
   ));
@@ -95,14 +98,14 @@ export function FeaturesTitle() {
       }}
     >
       <Fade>
-        <Title
+        {/* <Title
           className={classes.title}
           order={2}
           style={{ textAlign: "center" }}
           id="ourValues"
         >
           Our Values{" "}
-        </Title>
+        </Title> */}
       </Fade>
       <Container>
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing={"xl"}>

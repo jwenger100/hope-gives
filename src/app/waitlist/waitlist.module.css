@@ -35,7 +35,8 @@
   }
 }
 
-.container {
-  z-index: 3;
-  /* margin-top: -60px; */
+.formContainer {
+  @media screen and (max-width: $mantine-breakpoint-sm) {
+    margin: 0 auto;
+  }
 }

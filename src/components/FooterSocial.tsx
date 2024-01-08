@@ -22,7 +22,7 @@ export function FooterSocial() {
               className={classes.footerLogo}
             />
           </Box>
-          <Box className={classes.footerFlexItem} ta="center" pb={"sm"}>
+          <Box className={classes.footerFlexItem} ta="right" pb={"sm"}>
             {/* Twitter/X */}
             <ActionIcon
               size="lg"
