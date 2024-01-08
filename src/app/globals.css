@@ -50,5 +50,5 @@
 
 html {
   /* Accounts for height of header when navigating to a section */
-  scroll-padding-top: 70px;
+  scroll-padding-top: 60px;
 }

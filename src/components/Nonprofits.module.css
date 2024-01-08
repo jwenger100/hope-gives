@@ -9,13 +9,13 @@
   }
 }
 .nonprofitsWrapper {
-  height: 850px;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #ebebeb;
   background-image: var(--background-image-url);
-  padding-top: calc(rem(280px));
+  padding-top: calc(rem(240px));
   padding-bottom: calc(rem(130px));
   border-radius: var(--mantine-radius-xl);
   @media (max-width: $mantine-breakpoint-sm) {

@@ -23,6 +23,7 @@ const HowItWorksComponent = () => {
         boxShadow: "var(--mantine-shadow-lg)",
         borderRadius: "20px",
         border: "1.25px solid #dee2e6",
+        minHeight: "100vh",
       }}
       pb={"md"}
       mb={"xl"}

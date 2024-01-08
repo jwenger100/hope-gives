@@ -1,12 +1,5 @@
 /* HowItWorksComponent.css */
 
-.howItWorksCard {
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
 .donorBtn {
   display: block;
   width: 300px;

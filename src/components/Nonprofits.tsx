@@ -17,7 +17,7 @@ const Nonprofits = () => {
         >
           <Container size="md" ta={{ base: "left", sm: "center" }}>
             <Slide direction="down">
-              <Title mt="xl" mb="md" style={{ color: "var(--hopegives-gray)" }}>
+              <Title mb="md" style={{ color: "var(--hopegives-gray)" }}>
                 For Nonprofits
               </Title>
             </Slide>

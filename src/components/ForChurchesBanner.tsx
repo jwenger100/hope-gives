@@ -75,7 +75,7 @@ export function ForChurchesBanner() {
             <Text mb={"xl"} className={classes.text}>
               A new way to give
             </Text>
-            <SimpleGrid cols={{ base: 1, md: 2 }} spacing={50}>
+            <SimpleGrid cols={{ base: 1, md: 2 }} spacing={50} mt={"60px"}>
               {items}
             </SimpleGrid>
           </Container>

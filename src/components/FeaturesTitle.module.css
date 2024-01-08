@@ -9,7 +9,7 @@
       rgba(89, 79, 62, 0.3) /* --hopegives-gray*/
     ),
     var(--background-image-url);
-  height: auto;
+  min-height: 100vh;
   width: calc(100% + 35px);
   margin-left: -16px;
   margin-right: -16px;
