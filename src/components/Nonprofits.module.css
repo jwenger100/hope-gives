@@ -17,7 +17,6 @@
   background-image: var(--background-image-url);
   padding-top: calc(rem(240px));
   padding-bottom: calc(rem(130px));
-  border-radius: var(--mantine-radius-xl);
   @media (max-width: $mantine-breakpoint-sm) {
     border-radius: 0;
   }
