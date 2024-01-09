@@ -37,6 +37,14 @@
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   z-index: 1;
+  transition: transform 0.3s ease, background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px var(--hopegives-yellow);
 }
 
 .featureIcon {

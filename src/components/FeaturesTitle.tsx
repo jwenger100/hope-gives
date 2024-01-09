@@ -21,9 +21,6 @@ import { Fade, Slide } from "react-awesome-reveal";
 
 const features = [
   {
-    title: "Our values",
-  },
-  {
     icon: IconPlant,
     title: "Make a Difference",
     description:
@@ -60,6 +57,7 @@ export function FeaturesTitle() {
     <Slide
       key={feature.title || index}
       direction={index % 2 === 0 ? "left" : "right"}
+      className={index === 4 ? classes.lastItem : ""}
     >
       <Box className={classes.item}>
         {feature.icon && (
@@ -96,16 +94,16 @@ export function FeaturesTitle() {
       style={{
         "--background-image-url": `url(${process.env.NEXT_PUBLIC_BASE_PATH}/happy-people.jpg)`,
       }}
+      id="ourValues"
     >
       <Fade>
-        {/* <Title
+        <Title
           className={classes.title}
-          order={2}
           style={{ textAlign: "center" }}
           id="ourValues"
         >
           Our Values{" "}
-        </Title> */}
+        </Title>
       </Fade>
       <Container>
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing={"xl"}>

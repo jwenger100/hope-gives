@@ -16,10 +16,7 @@
 }
 
 .title {
-  /* font-size: rem(36px);
-  font-weight: 900; */
-  line-height: 1.1;
-  margin-bottom: var(--mantine-spacing-xl);
+  margin-bottom: 60px;
   color: white;
 }
 
@@ -42,4 +39,13 @@
   box-shadow: var(--mantine-shadow-lg); /* Enhance the shadow */
   border-color: var(--hopegives-yellow); /* Change the border color */
   color: var(--hopegives-yellow); /* Change the text color */
+}
+
+.lastItem {
+  grid-column: 1 / -1; /* Span all the columns */
+  width: 440px; /* Set the width */
+  margin: auto; /* Center the box within the grid cell */
+  @media screen and (max-width: $mantine-breakpoint-md) {
+    width: 100%;
+  }
 }
