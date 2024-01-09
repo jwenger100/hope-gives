@@ -42,7 +42,7 @@ export function HeroImageBackground() {
         <Title className={classes.title} ta={"center"}>
           Bring Audacious Hope To The World
           <Text fw={600} ta={"center"} mt={"xs"}>
-            Through Social Funding{" "}
+            Through Social Fundraising{""}
           </Text>
         </Title>
 
