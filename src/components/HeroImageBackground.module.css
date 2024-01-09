@@ -30,30 +30,58 @@
   background-repeat: no-repeat;
   background-image: var(--background-image-url);
   animation: zoomIn 2s ease-out;
+  overflow: hidden; /* To contain the pseudo-element's blur effect within the wrapper */
+
+  /* Create a pseudo-element for the gradient effect */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%; /* Cover the right half of the wrapper */
+    background: linear-gradient(
+      /* #594f3e hopegives gray */ to left,
+      #f0f0f0,
+      transparent
+    ); /* Adjust colors as needed */
+    transition: width 0.5s ease; /* Smooth transition for the effect */
+  }
 
   @media (max-width: $mantine-breakpoint-xs) {
     padding-top: rem(80px);
     padding-bottom: rem(50px);
+    &::after {
+      width: 0; /* Set width to 0 to remove the blur effect */
+    }
   }
 }
 
 .inner {
-  position: relative;
+  position: absolute; /* Use absolute positioning */
+  right: 0; /* Align to the right side */
+  width: 50%; /* Set width to half of the parent */
+  top: 45%; /* Align vertically to the center */
+  transform: translateY(-50%); /* Adjust vertical position to truly center */
   z-index: 1;
-  @media (max-width: $mantine-breakpoint-xs) {
-    margin-top: 30%;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    position: relative; /* Or adjust as needed for mobile */
+    width: 100%; /* Take full width on smaller screens */
+    right: auto; /* Reset right alignment */
+    top: auto; /* Reset top alignment */
+    transform: none; /* Reset transform */
+    margin-top: 100px;
   }
 }
 
 .title {
-  font-weight: 800;
-  font-size: rem(50px);
+  font-weight: 600;
+  font-size: rem(40px);
   letter-spacing: rem(-1px);
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
   color: var(--mantine-color-white);
-  margin-bottom: var(--mantine-spacing-xs);
-  margin-top: var(--mantine-spacing-xl);
   text-align: center;
   animation: slideUp 2s ease-in;
   background-image: linear-gradient(
@@ -86,7 +114,6 @@
   color: var(--mantine-color-gray-0);
   text-align: center;
   animation: slideUp 2s ease-in;
-
   @media (max-width: $mantine-breakpoint-xs) {
     font-size: var(--mantine-font-size-md);
     text-align: left;

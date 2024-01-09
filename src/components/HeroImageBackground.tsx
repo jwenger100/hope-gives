@@ -7,10 +7,9 @@ import classes from "./HeroImageBackground.module.css";
 export function HeroImageBackground() {
   // List of image URLs
   const images = [
-    `${process.env.NEXT_PUBLIC_BASE_PATH}/donations.jpg`,
-    `${process.env.NEXT_PUBLIC_BASE_PATH}/donations1.jpg`,
-    `${process.env.NEXT_PUBLIC_BASE_PATH}/donations3.jpg`,
-    `${process.env.NEXT_PUBLIC_BASE_PATH}/donations4.jpg`,
+    `${process.env.NEXT_PUBLIC_BASE_PATH}/donations4.png`,
+    `${process.env.NEXT_PUBLIC_BASE_PATH}/donations5.png`,
+    `${process.env.NEXT_PUBLIC_BASE_PATH}/donations6.png`,
   ];
 
   const [backgroundImageUrl, setBackgroundImageUrl] = useState("");
@@ -46,7 +45,6 @@ export function HeroImageBackground() {
         <Text fw={600} className={classes.description} ta={"center"}>
           Through Social Funding{" "}
         </Text>
-
         <Box className={classes.controls} ta={"center"}>
           <Link href={"/waitlist"}>
             <Button
