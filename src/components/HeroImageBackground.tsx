@@ -41,10 +41,11 @@ export function HeroImageBackground() {
       <Box className={classes.inner}>
         <Title className={classes.title} ta={"center"}>
           Bring Audacious Hope To The World
+          <Text fw={600} ta={"center"} mt={"xs"}>
+            Through Social Funding{" "}
+          </Text>
         </Title>
-        <Text fw={600} className={classes.description} ta={"center"}>
-          Through Social Funding{" "}
-        </Text>
+
         <Box className={classes.controls} ta={"center"}>
           <Link href={"/waitlist"}>
             <Button

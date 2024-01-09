@@ -9,7 +9,7 @@
   }
 }
 
-/* Animation for description and title */
+/* Animation for title */
 @keyframes slideUp {
   from {
     transform: translateY(20px);
@@ -108,16 +108,6 @@
 
 .highlight {
   color: var(--mantine-color-primary-4);
-}
-
-.description {
-  color: var(--mantine-color-gray-0);
-  text-align: center;
-  animation: slideUp 2s ease-in;
-  @media (max-width: $mantine-breakpoint-xs) {
-    font-size: var(--mantine-font-size-md);
-    text-align: left;
-  }
 }
 
 .controls {
